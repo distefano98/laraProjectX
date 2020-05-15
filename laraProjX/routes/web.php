@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'homepage')
-        ->name('homepage');
+Route::view('/', 'Homepage')
+        ->name('Homepage');
 
 Route::get('/catalog', 'PublicController@showCatalog')
         ->name('catalog');
@@ -33,8 +33,8 @@ Route::view('/where', 'where')
 Route::view('/who', 'who')
         ->name('who');
 
-Route::view('/policy', 'policy')
-        ->name('policy');
+Route::view('/privacypolicy', 'privacypolicy')
+        ->name('privacypolicy');
 
 Route::get('/user', 'UserController@index')
         ->name('user');

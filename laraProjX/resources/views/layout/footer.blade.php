@@ -1,8 +1,6 @@
-<?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+<ul class="footer__menu">
+                <li class="footer__menu__item"> <a href="{{ route('homepage') }}"> Home </a> </li>
+                <li class="footer__menu__item"> <a href=""> Contattaci </a> </li>
+                <li class="footer__menu__item"> <a href="{{ route('privacypolicy') }}"> Privacy Policy </a> </li>
+</ul>
+            

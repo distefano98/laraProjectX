@@ -9,9 +9,9 @@
 .cover_card{height:40%;width: 100%;display: block;}
 .card{position: relative;height: 100%;width: 31%;float: left;margin:1%;background-size: 100% 100%;}
 
-#card1{background-image:  url("../UTILS/card1.jpg");}
-#card2{background-image:  url("../UTILS/card2.jpg");}
-#card3{background-image:  url("../UTILS/card3.jpg");}
+#card1{background-image:  url("image/card1.jpg");}
+#card2{background-image:  url("image/card2.jpg");}
+#card3{background-image:  url("image/card3.jpg");}
 .card p{height: auto;width: 80%;display: block;color: black; background-color:#d6d6d6;
        opacity: 0.9;text-align: center; margin: auto; margin-bottom: 0;}
 .descrizione_sito{  color: gray; font-family: sans-serif; float:left; background-color: #d6d6d6; }

@@ -70,11 +70,6 @@ body{background-color: #F1F1F1;}
   
    .footer__menu__item a:hover{color: lightsteelblue;}
    
-   .footer__menu__item ul{width: 20%;position: absolute;padding: 0;display: block;}
    
-   .footer__menu__item ul li{list-style: none;margin:auto;}
-  
-   .footer__menu__item ul li a { padding: 0;display: block;font-size: medium; text-align: center;}
-
    
 
