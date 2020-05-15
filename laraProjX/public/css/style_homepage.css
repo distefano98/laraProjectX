@@ -1,0 +1,21 @@
+
+#wrapper{position: relative; width: 100%;height: 50%;background-color: #d6d6d6;}
+.cover_slider{position: relative;width: 60%;height: 100%;margin: auto;overflow: hidden;}
+
+.cover_slider_item{position:absolute;width: 100%;height: 100%;}
+.cover_slider p{width: 80%;height: auto;display: block;color: black; background-color:#d6d6d6;
+               opacity: 0.9;text-align: center; position: relative;margin: auto;}
+
+.cover_card{height:40%;width: 100%;display: block;}
+.card{position: relative;height: 100%;width: 31%;float: left;margin:1%;background-size: 100% 100%;}
+
+#card1{background-image:  url("../UTILS/card1.jpg");}
+#card2{background-image:  url("../UTILS/card2.jpg");}
+#card3{background-image:  url("../UTILS/card3.jpg");}
+.card p{height: auto;width: 80%;display: block;color: black; background-color:#d6d6d6;
+       opacity: 0.9;text-align: center; margin: auto; margin-bottom: 0;}
+.descrizione_sito{  color: gray; font-family: sans-serif; float:left; background-color: #d6d6d6; }
+.descrizione_sito p{margin-left: 10%; margin-right: 10%;}
+
+.descrizione_sito h1{text-align: center;margin-left: 10%; margin-right: 10%;}
+

@@ -1,11 +1,80 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 14-mag-2020, 23.02.11
-    Author     : lucadistefano
+html,body{width: 100%;height: 100%;padding: 0;margin: 0;}
 
-*/
+
+/* ---------------------------- BODY ---------------------------------  */
+
+
+body{background-color: #F1F1F1;}
+
+
+/* ---------------------------- HEADER ---------------------------------  */
+.header {
+    
+     background-color: #F1F1F1;
+     margin: 0;
+     padding : 0;
+     width: 100%;
+     /*position: fixed;*/
+     border-bottom: 0.5px;
+     border-bottom-style: solid;
+     border-bottom-color: grey;
+     
+}
+
+.header__logo {display: block; float: left;text-decoration: none;}
+
+.header__menu{margin: 0;padding: 15px;float: right;}
+
+.header__menu__item{display: inline-block;}
+
+.header__menu__item a{font-style: italic;text-decoration: none;display: block;padding: 1em;padding-bottom: 2em;color: black;}
+
+.header__menu__item a:hover{ color: lightsteelblue;}
+
+/* ---------------------------- COVER ---------------------------------  */
+.cover{
+    background-color: #d6d6d6;
+    clear: both;
+    width: 100%;
+    height: 100%;
+   
+  
+   
+   /* !!!!!! IMMAGINE DI BACKGROUND
+   background-image: url("../UTILS/contenuto_background.jpg");
+    background-size: cover;
+   -moz-background-size: cover;
+    background-position: center center; 
+    */
+   
+    /*margin-top: 2vw;*/
+   
+    }
+ 
+
+/* ---------------------------- FOOTER ---------------------------------  */
+ .footer{
+     clear: both;
+     width: 100%;
+     background-color: #F1F1F1;
+     border-top: 0.5px solid gray;
+     
+     
+    }
+   
+   .footer__menu{width: 100%;text-align: center;margin: auto;padding: 0;}
+    
+   .footer__menu__item {width: 20%;display: inline-block;margin: auto;}
+    
+   .footer__menu__item a {text-decoration: none;display: block;color: black;font-size:x-large;}
+  
+   .footer__menu__item a:hover{color: lightsteelblue;}
+   
+   .footer__menu__item ul{width: 20%;position: absolute;padding: 0;display: block;}
+   
+   .footer__menu__item ul li{list-style: none;margin:auto;}
+  
+   .footer__menu__item ul li a { padding: 0;display: block;font-size: medium; text-align: center;}
+
+   
 
