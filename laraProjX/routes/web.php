@@ -13,6 +13,34 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'homepage')
+        ->name('homepage');
+
+Route::get('/catalog', 'PublicController@showCatalog')
+        ->name('catalog');
+
+Route::get('login', 'Auth\LoginController@showLoginForm')
+        ->name('login');
+
+Route::post('login', 'Auth\LoginController@login');
+
+Route::post('logout', 'Auth\LoginController@logout')
+        ->name('logout');
+
+Route::view('/where', 'where')
+        ->name('where');
+
+Route::view('/who', 'who')
+        ->name('who');
+
+Route::view('/policy', 'policy')
+        ->name('policy');
+
+Route::get('/user', 'UserController@index')
+        ->name('user');
+
+Route::get('/staff', 'StaffController@index')
+        ->name('staff');
+
+Route::get('/admin', 'AdminController@index')
+        ->name('admin');
