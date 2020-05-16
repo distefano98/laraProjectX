@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'Homepage')
         ->name('Homepage');
 
-Route::get('/catalog', 'PublicController@showCatalog')
+Route::view('/catalog', 'PublicController@showCatalog')
         ->name('catalog');
 
 Route::get('login', 'Auth\LoginController@showLoginForm')
