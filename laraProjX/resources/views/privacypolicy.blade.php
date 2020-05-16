@@ -1,4 +1,6 @@
 @extends ('layout.page')
+@section ('title','Privacy Policy')
+
 @section ('head')
 <style>
     .cover {height: auto;}

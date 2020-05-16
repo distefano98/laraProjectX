@@ -6,7 +6,7 @@
         
         @yield('head')
         
-        <title> WLCC </title>
+        <title> WLCC - @yield('title')</title>
     </head>
    
     

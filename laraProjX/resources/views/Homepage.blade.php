@@ -1,4 +1,6 @@
 @extends ('layout.page')
+@section ('title',' Home')
+ 
 
 @section('head')
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style_homepage.css') }}" >
