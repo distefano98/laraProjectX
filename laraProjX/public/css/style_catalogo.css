@@ -16,8 +16,7 @@
 
 
 /*    scheda prodotto */
-
-.prodotto {position: relative;width: 60%;border: 2px solid red;margin: auto;height: 40%}
-.logoProdotto{position: absolute;border: 2px solid gold;width: 30%;height: 85%;margin: 2%}
-.prezzoProdotto{float: right;border: 2px solid greenyellow;width: 30%;height: 20%;margin: 2%;}
-.infoProdotto{float: right;border: 2px solid red;width: 65%;height: 55%;margin: 1%}
+.prodotto {border: 1px solid black;width: 80%;height: 40%;margin: auto;}
+.logoProdotto{float: left;height: 40%;width: 30%;border: 1px solid gold;}
+.prezzoProdotto{float: right;border: 1px solid greenyellow;width: 50%;height: inherit;}
+.infoProdotto{float: right;width: 100%;height: 50%;border: 1px solid red}
