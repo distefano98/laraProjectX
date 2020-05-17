@@ -35,5 +35,16 @@
                      </li>
                 </ul>
             </div>
-            
+<div class="prodotto">
+    <div class="logoProdotto">
+    
+    </div>
+    <div class="prezzoProdotto">
+    
+    </div>
+    <div class="infoProdotto">
+    
+    </div>
+    
+</div>            
 @endsection
