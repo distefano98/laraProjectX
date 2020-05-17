@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'Homepage')
         ->name('Homepage');
 
-Route::view('/catalog', 'PublicController@showCatalog')
-        ->name('catalog');
+//Route::view('/catalog', 'PublicController@showCatalog')
+//      ->name('catalog');
 
 Route::get('login', 'Auth\LoginController@showLoginForm')
         ->name('login');
@@ -44,3 +44,12 @@ Route::get('/staff', 'StaffController@index')
 
 Route::get('/admin', 'AdminController@index')
         ->name('admin');
+
+Route::get('/catalog', 'PublicController@showCatalog')
+        ->name('catalog');
+
+Route::get('/selMacroCateg/{macroCatId}', 'PublicController@showMacroCategProds')
+        ->name('catalogMacro');
+
+Route::get('/selMacroCateg/{macroCatId}/selCat/{catId}', 'PublicController@showCategProds')
+        ->name('catalogCateg');

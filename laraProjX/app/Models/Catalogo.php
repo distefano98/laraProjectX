@@ -10,23 +10,22 @@ class Catalogo extends Model
         return Categorie::where('parId', 0)->get();
     }
 
-    public function getCategsByParId($MacroId) {
-        return Categorie::whereIn('parId', $MacroId)->get();
+    public function getCategsByParId($macroId) {
+        return Categorie::whereIn('parId', $macroId)->get();
     }
 
-    // Estrae i prodotti della categoria $catId (tutti o solo quelli in sconto), eventualmente ordinati
-    public function getProdsByCateg($catId, $paged = 1, $order = null, $discounted = false) {
+    // Estrae i prodotti della categoria $catId, eventualmente ordinati
+    public function getProdsByCateg($catId, $paged = 1, $discounted = false) {
 
-        $prods = Prodotti::whereIn('catId', $catId)
+        $prods = Prodotti::whereIn('catId', $catId)                             //Prodotti della sottocategoria specificata
                 ->orWhereHas('prodCat', function ($query) use ($catId) {
-                        $query->whereIn('parId', $catId);
+                        $query->whereIn('parId', $catId);                       //Prodotti della sottocategoria figlia di quella speicificata
         });
+        
         if ($discounted) {
             $prods = $prods->where('discounted', true);
         }
-        if (!is_null($order)) {
-            $prods = $prods->orderBy('discountPerc', $order);
-        }
+        
         return $prods->paginate($paged);
     }
 
