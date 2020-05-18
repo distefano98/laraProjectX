@@ -1,6 +1,6 @@
 @extends('layout.page')
 
-@section('title','Catalog')
+@section('title','Catalogo')
 
 @section('head')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/style_catalogo.css') }}" >

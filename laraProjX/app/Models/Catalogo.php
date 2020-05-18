@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Resources\Category;
+use App\Models\Resources\Product;
 
 class Catalogo extends Model
 {
@@ -23,7 +25,7 @@ class Catalogo extends Model
         });
         
         if ($discounted) {
-            $prods = $prods->where('discounted', true);
+            $prods = $prods->where('sconto', true);
         }
         
         return $prods->paginate($paged);
