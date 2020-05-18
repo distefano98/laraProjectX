@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Prodotti extends Model
 {
-    protected $table = 'prodotti';
+    protected $table = 'product';
     protected $primaryKey = 'prodId';
 
     // prodId non modificabile da un HTTP Request

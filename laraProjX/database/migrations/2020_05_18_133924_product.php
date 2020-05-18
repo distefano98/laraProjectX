@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class CreateProductTable extends Migration
+class Product extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateProductTable extends Migration
      */
     public function up()
     {
-        Schema::create('prodotti', function (Blueprint $table) {
+        Schema::create('product', function (Blueprint $table) {
             $table->bigIncrements('prodId');
             $table->bigInteger('catId')->unsigned()->index();
             $table->foreign('catId')->references('catId')->on('category');
             $table->string('nome',25);
             $table->string('marca',25);
+            $table->string('processore',30);
             $table->float('dimDisplay');
             $table->string('risDisplay',10);         
             $table->integer('ram');  
@@ -41,6 +42,6 @@ class CreateProductTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('prodotti');
+        Schema::dropIfExists('product');
     }
 }

@@ -2,17 +2,16 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder {
-
+class DatabaseSeeder extends Seeder
+{
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
-
-    public function run() {
-
-        DB::table('categorie')->insert([
+    public function run()
+    {
+        DB::table('category')->insert([
             ['catId' => 1, 'nome' => 'Smartphone', 'parId' => 0, 'desc' => 'IOS, Android'],
             ['catId' => 2, 'nome' => 'Pc', 'parId' => 0, 'desc' => 'MacOS, Windows, ChromeOS'],
             ['catId' => 3, 'nome' => 'Tablet', 'parId' => 0, 'desc' => 'iOS_ipadOS, Android'],
@@ -25,7 +24,7 @@ class DatabaseSeeder extends Seeder {
             ['catId' => 10, 'nome' => 'MacOS', 'parId' => 3, 'desc' => 'Prodotti con sistema operativo: MacOS'],
         ]);
 
-        DB::table('prodotti')->insert([
+        DB::table('product')->insert([
             ['nome' => 'APPLE iPhone 8', 'catId' => 4, 'marca' => 'APPLE', 'dimDisplay' => 4.7, 'risDisplay' => '1334x750', 
                 'processore' => 'Apple A11 Bionic', 'ram' => 2, 'memoria' => 64, 'schedaGraf' => 'Proprietaria Apple',
                 'fotocamera' => '12 MP, f/1.8, 28mm, PDAF, OIS, quad-LED dual tone flash, sensore da 1/3″+ Frontale 7 MP, f/2.2',
@@ -1055,11 +1054,10 @@ class DatabaseSeeder extends Seeder {
                 Un tuo tocco sullo schermo, ed è subito pronto
                 Lo schermo di Galaxy Tab S6 nasconde un lettore ottico di impronte digitali, per il massimo della sicurezza. Il tablet si sblocca con un semplice tocco del tuo dito, devi solo sfiorare lo schermo senza doverti ricordare alcuna password.',
                 'prezzo' => 909, 'scontoPerc' => 3, 'sconto' => 0, 'image' => 'tabs6.jpg'],
-                
-            
+
         ]);
 
-        DB::table('utenti')->insert([
+        DB::table('users')->insert([
             ['nome' => 'Mario', 'cognome' => 'Rossi', 'email' => 'mario@rossi.it', 
                 'residenza' => '', 'occupazione' => '',
                 'username' => 'MarioRossi90', 'password' => Hash::make('MarioRossi90'), 
@@ -1078,5 +1076,4 @@ class DatabaseSeeder extends Seeder {
                 'ruolo' => 'user','created_at' => date("Y-m-d H:i:s"), 'updated_at' => date("Y-m-d H:i:s")],
         ]);
     }
-
 }
