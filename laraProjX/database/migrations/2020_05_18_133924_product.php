@@ -31,7 +31,7 @@ class Product extends Migration
             $table->float('prezzo');
             $table->integer('scontoPerc');
             $table->tinyInteger('sconto');
-            $table->text('image')->nullable();
+            $table->text('immagine')->nullable();
         });
     }
 
