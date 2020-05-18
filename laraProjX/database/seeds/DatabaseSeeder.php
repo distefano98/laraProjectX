@@ -12,16 +12,16 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         DB::table('category')->insert([
-            ['catId' => 1, 'nome' => 'Smartphone', 'parId' => 0, 'desc' => 'IOS, Android'],
-            ['catId' => 2, 'nome' => 'Pc', 'parId' => 0, 'desc' => 'MacOS, Windows, ChromeOS'],
-            ['catId' => 3, 'nome' => 'Tablet', 'parId' => 0, 'desc' => 'iOS_ipadOS, Android'],
-            ['catId' => 4, 'nome' => 'IOS', 'parId' => 1, 'desc' => 'Prodotti con sistema operativo: IOS'],
-            ['catId' => 5, 'nome' => 'Android', 'parId' => 1, 'desc' => 'Prodotti con sistema operativo: Android'],
-            ['catId' => 6, 'nome' => 'MacOS', 'parId' => 2, 'desc' => 'Prodotti con sistema operativo: MacOS'],
-            ['catId' => 7, 'nome' => 'Windows', 'parId' => 2, 'desc' => 'Prodotti con sistema operativo: Windows'],
-            ['catId' => 8, 'nome' => 'ChromeOS', 'parId' => 2, 'desc' => 'Prodotti con sistema operativo: ChromeOS'],
-            ['catId' => 9, 'nome' => 'IOS_IpadOS', 'parId' => 3, 'desc' => 'Prodotti con sistema operativo: IOS_IpadOS'],
-            ['catId' => 10, 'nome' => 'MacOS', 'parId' => 3, 'desc' => 'Prodotti con sistema operativo: MacOS'],
+            ['nome' => 'Smartphone', 'parId' => 0, 'desc' => 'IOS, Android'],
+            ['nome' => 'Pc', 'parId' => 0, 'desc' => 'MacOS, Windows, ChromeOS'],
+            ['nome' => 'Tablet', 'parId' => 0, 'desc' => 'iOS_ipadOS, Android'],
+            ['nome' => 'IOS', 'parId' => 1, 'desc' => 'Prodotti con sistema operativo: IOS'],
+            ['nome' => 'Android', 'parId' => 1, 'desc' => 'Prodotti con sistema operativo: Android'],
+            ['nome' => 'MacOS', 'parId' => 2, 'desc' => 'Prodotti con sistema operativo: MacOS'],
+            ['nome' => 'Windows', 'parId' => 2, 'desc' => 'Prodotti con sistema operativo: Windows'],
+            ['nome' => 'ChromeOS', 'parId' => 2, 'desc' => 'Prodotti con sistema operativo: ChromeOS'],
+            ['nome' => 'IOS_IpadOS', 'parId' => 3, 'desc' => 'Prodotti con sistema operativo: IOS_IpadOS'],
+            ['nome' => 'MacOS', 'parId' => 3, 'desc' => 'Prodotti con sistema operativo: MacOS'],
         ]);
 
         DB::table('product')->insert([

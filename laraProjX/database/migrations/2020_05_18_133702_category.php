@@ -17,7 +17,7 @@ class Category extends Migration
             $table->bigIncrements('catId')->unsigned()->index();
             $table->string('nome',25);
             $table->integer('parId');
-            $table->string('desc',255);
+            $table->string('desc',300);
         });
     }
 

@@ -4,7 +4,7 @@ namespace App\Models\Resources;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Prodotti extends Model
+class Product extends Model
 {
     protected $table = 'product';
     protected $primaryKey = 'prodId';
@@ -22,8 +22,8 @@ class Prodotti extends Model
         return $price;
     }
 
-    // Realazione univoca con Categorie
+    // Relazione univoca con Category
     public function prodCat() {
-        return $this->hasOne(Categorie::class, 'catId', 'catId');
+        return $this->hasOne(Category::class, 'catId', 'catId');
     }
 }
