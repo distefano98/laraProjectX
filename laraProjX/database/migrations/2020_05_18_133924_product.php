@@ -26,12 +26,12 @@ class Product extends Migration
             $table->integer('memoria'); 
             $table->string('schedaGraf'); 
             $table->string('fotocamera');
-            $table->string('descShort',50);
+            $table->string('descShort',1000);
             $table->string('descLong',7000);
             $table->float('prezzo');
             $table->integer('scontoPerc');
             $table->tinyInteger('sconto');
-            $table->text('immagine')->nullable();
+            $table->text('image')->nullable();
         });
     }
 
