@@ -21,7 +21,7 @@ class Product extends Migration
             $table->string('marca',25);
             $table->string('processore',30);
             $table->float('dimDisplay');
-            $table->string('risDisplay',10);         
+            $table->string('risDisplay',100);         
             $table->integer('ram');  
             $table->integer('memoria'); 
             $table->string('schedaGraf'); 
