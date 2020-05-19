@@ -53,3 +53,6 @@ Route::get('/selMacroCateg/{macroCatId}', 'PublicController@showMacroCategProds'
 
 Route::get('/selMacroCateg/{macroCatId}/selCat/{catId}', 'PublicController@showCategProds')
         ->name('catalogCateg');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
