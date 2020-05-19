@@ -1,4 +1,4 @@
-@extends ('layout.page')
+@extends ('layout.publicPage')
 @section ('title','Privacy Policy')
 
 @section ('head')

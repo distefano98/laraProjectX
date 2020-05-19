@@ -1,15 +1,11 @@
-@extends ('layout.page')
+@extends ('layout.publicPage')
 @section ('title','Who')
 
 @section ('content')
 <div>
     <p>
         
-        WLCC TECHNOLOGY presenta gli sviluppatori più bravi al mondo:
-        WILLIAM PROPERZI
-        LUCA DI STEFANO
-        CHRISTIAN ASCANI
-        CRISTIAN CINGOLANI
+        WLCC TECHNOLOGY 
         
     </p>
     
