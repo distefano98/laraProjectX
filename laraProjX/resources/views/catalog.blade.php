@@ -4,6 +4,9 @@
 
 @section('head')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/style_catalogo.css') }}" >
+<style>
+    .cover {height: auto;}
+</style> 
 @endsection
 
 @section('content')
@@ -37,16 +40,36 @@
                      </li>
                 </ul>
             </div>
-<div class="prodotto">
-    <div class="logoProdotto">
+
+
+ @isset($products)
+    @foreach ($products as $product)
+    <div class="prod">
+        <div class="prod_top">
+        <div class="imgProd">
+            @include('helpers/productImg', ['attrs' => 'imagefrm', 'imgFile' => $product->image]) 
+        </div>
+        <div class="infoProd">
+                        <h1 class="title">Prodotto: {{ $product->nome }}</h1>
+                        <p class="meta">Descrizione Breve: {{ $product->descShort }}</p>
+        </div>
+        </div>
+       
+        <div class="textProd">
+                    <p>Descrizione Estesa: {!! $product->descLong !!}</p>
+        </div>
+         <div class="priceProd">
+                        @include('helpers/productPrice')
+        </div>
+                
+</div>    
+
     
-    </div>
-    <div class="prezzoProdotto">
-    
-    </div>
-    <div class="infoProdotto">
-    
-    </div>
-    
-</div>            
+
+@endforeach
+
+    <!--Paginazione-->
+    @include('pagination.paginator', ['paginator' => $products])
+
+  @endisset()
 @endsection
