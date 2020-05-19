@@ -11,36 +11,33 @@
 
 @section('content')
 
-
-            <div class="cover_menu">
-                <ul class="cover_menu_item">
-                     <li> <a href=""> SMARTPHONE </a>
-                         <ul>
-                             <li > APPLE </li>
-                             <li > ANDROID </li>
-                                 
-                         </ul>
-                     </li>
-                     <li > <a href=""> LAPTOP </a>
-                         <ul >
-                             <li >MACOS</li>
-                             <li>WINDOWS</li>
-                             <li>CHROMEBOOK</li>
-                                 
-                         </ul>
-                             
-                     </li>
-                     <li > <a href=""> TABLET </a>
-                         <ul >
-                             <li> APPLE </li>
-                             <li> ANDROID </li>
-                                 
-                         </ul>
-                             
-                     </li>
-                </ul>
+    
+     <div class="categorie">
+        <ul class="categorie_item">
+                 
+            @foreach ($macroCategories as $category)
+              <li>
+               <a href="{{  route('catalogMacro', [$category->catId])  }}">{{ $category->nome }}</a>
+              </li>
+                     @endforeach
+         </ul>
+                
             </div>
 
+@isset($selectedMacroCateg)
+     <div class="sottoCategorie">
+        <ul class="sottoCategorie_item">
+                 
+            @foreach ($subCategories as $subCategory)
+               <li>
+               <a href="{{  route('catalogCateg', [$selectedMacroCateg->catId, $subCategory->catId]) }}">{{ $subCategory->nome }}</a>
+               </li>
+              @endforeach
+         </ul>
+                
+            </div>
+@endisset()
+    
 
  @isset($products)
     @foreach ($products as $product)

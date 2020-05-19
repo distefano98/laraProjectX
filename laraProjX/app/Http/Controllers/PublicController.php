@@ -38,7 +38,7 @@ class PublicController extends Controller
         $subCategs = $this->__catalogoModel->getCategsByParId([$macroCatId]);
                         
         //Prodotti in sconto della Macrocategoria selezionata
-        $prods = $this->__catalogoModel->getProdsByCat([$macroCatId], 2, false);
+        $prods = $this->__catalogoModel->getProdsByCateg([$macroCatId], 2, false);
 
         return view('catalog')
                         ->with('macroCategories', $macroCategs)
@@ -59,7 +59,7 @@ class PublicController extends Controller
         $subCategs = $this->__catalogoModel->getCategsByParId([$macroCatId]);
 
         // Prodotti della sottocategoria selezionata
-        $prods = $this->__catalogoModel->getProdsByCat([$catId]);
+        $prods = $this->__catalogoModel->getProdsByCateg([$catId]);
 
         return view('catalog')
                         ->with('macroCategories', $macroCategs)
