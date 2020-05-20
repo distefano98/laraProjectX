@@ -23,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        //poniamo a 191 la dimensione di ogni stringa che i model utilizzeranno
+       // Schema::defaultStringLength(191);
     }
 }
