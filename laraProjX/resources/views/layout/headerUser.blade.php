@@ -6,5 +6,6 @@
                 <li class="header__menu__item"> <a href="{{ route('who') }}"> CHI SIAMO </a></li>
                 <li class="header__menu__item"> <a href="{{ route('where') }}"> DOVE SIAMO </a></li>
                 <li class="header__menu__item"> <a href="{{ route('where') }}"> AREA RISERVATA </a></li>
+                
                 <li class="header__menu__item"> <a href=""> LOGOUT </a></li>
     </ul>
