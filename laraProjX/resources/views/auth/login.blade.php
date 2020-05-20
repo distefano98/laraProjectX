@@ -30,7 +30,7 @@
     </div>
     
  <div class="pulsante">
-   {{ Form::submit('LOGIN', ['class' => 'botton-form'])}}
+   {{ Form::submit('login', ['class' => 'botton-form'])}}
      </div>
 
   <div> <a href="{{ route('register') }}"> Non hai un account ? Registrati ora  </a>

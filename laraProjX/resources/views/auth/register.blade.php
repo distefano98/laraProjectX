@@ -1,5 +1,13 @@
 @extends('layout.publicPage')
+@section('head')
+<style>
+    
+</style>
+                
+@endsection
 
+
+@section('title', 'REGISTRATI')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

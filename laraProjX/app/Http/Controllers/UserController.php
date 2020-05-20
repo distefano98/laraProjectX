@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Resources\User
 use Illuminate\Http\Request;
 
 class UserController extends Controller
