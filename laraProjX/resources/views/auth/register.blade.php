@@ -1,4 +1,4 @@
-@extends('layout.pagePublic')
+@extends('layout.publicPage')
 
 @section('content')
 <div class="container">

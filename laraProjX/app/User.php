@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'surname', 'email', 'username', 'password',
+        'name', 'cognome', 'email', 'username', 'password', 'residenza' ,'occupazione' ,'ruolo'
     ];
 
     /**
@@ -25,7 +25,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password','username' , 'remember_token',
     ];
 
     /**
@@ -39,6 +39,6 @@ class User extends Authenticatable
     
     public function hasRole($role) {
         $role = (array)$role;
-        return in_array($this->role, $role);
+        return in_array($this->ruolo, $role);
     }
 }

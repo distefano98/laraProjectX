@@ -33,6 +33,9 @@
    {{ Form::submit('LOGIN', ['class' => 'botton-form'])}}
      </div>
 
+  <div> <a href="{{ route('register') }}"> Non hai un account ? Registrati ora  </a>
+       </div>
+
 {{Form::close() }}
 
 </div>

@@ -48,7 +48,7 @@ class DatabaseSeeder extends Seeder
                 Il chip più potente e intelligente mai creato per uno smartphone. Ha quattro core ad alta efficienza fino al 70% più veloci del chip A10 Fusion. E due core ad alte prestazioni fino al 25% più scattanti. Il performance controller di seconda generazionefornisce più potenza quando ti serve, e garantisce sempre la stessa grandeautonomia
                 Realtà aumentata
                 Il tuo modo di vedere il mondo sta per cambiare.Straordinarie esperienze di realtà aumentata ti aspettano su giochi e app,grazie alla potenza di A11 Bionic.',
-                'prezzo' => 559, 'scontoPerc' => 9, 'sconto' => 0, 'image' => 'iphone8.jpg'],
+                'prezzo' => 559, 'scontoPerc' => 9, 'sconto' => 1, 'image' => 'iphone8.jpg'],
             ['nome' => 'APPLE iPhone 8 plus', 'catId' => 4, 'marca' => 'APPLE', 'dimDisplay' => 5.5, 'risDisplay' => '1920x1080', 
                 'processore' => 'Apple A11 Bionic', 'ram' => 3, 'memoria' => 64, 'schedaGraf' => 'Proprietaria Apple',
                 'fotocamera' => 'dual 12 MP, (28mm f/1.8, OIS + 56mm f/2.8), PDAF, 2x optical zoom + Frontale 7 MP, apertura f/2.2', 
@@ -91,7 +91,7 @@ class DatabaseSeeder extends Seeder
                 Lo smartphone è caratterizzato da un design nettamente rinnovato nella parte anteriore, che vede l implementazione di uno schermo con tecnologia OLED da 5,8 pollici, che percorre l intera superficie frontale del dispositivo, lasciando spazio unicamente a una piccola zona multifunzionale che vedrà implementati numerosi nuovi sensori.
                 Tra le principali nuove caratteristiche vi è inoltre una doppia fotocamera posteriore da 12 megapixel con depth sensing.
                 iPhone X è dotato di certificazione IP67.',
-                'prezzo' => 839, 'scontoPerc' => 10, 'sconto' => 0, 'image' => 'iphonex.jpg'],
+                'prezzo' => 839, 'scontoPerc' => 10, 'sconto' => 1, 'image' => 'iphonex.jpg'],
             ['nome' => 'APPLE iPhone XR', 'catId' => 4, 'marca' => 'APPLE', 'dimDisplay' => 6.1, 'risDisplay' => '828x1792', 
                 'processore' => 'Apple A12 Bionic', 'ram' => 3, 'memoria' => 128, 'schedaGraf' => 'Proprietaria Apple',
                 'fotocamera' => 'fotocamera da 12 megapixel, con aperture f/2.55 + Frontale 7 MP, apertura f/2.2', 
@@ -143,7 +143,7 @@ class DatabaseSeeder extends Seeder
                 iPhone XS ti dà connessioni 4G LTE Advanced per download velocissimi. E c’è più spazio che su qualsiasi altro iPhone: fino a 512GB.
                 Come iPhone non c’è nessuno.
                 Dietro a ogni iPhone ci sono decisioni precise che lo rendono unico: dalla scelta dei processi produttivi a quella di progettarlo fin dall’inizio pensando alla sicurezza e alla privacy, fino al modo responsabile in cui ricicliamo le parti che lo compongono.',
-                'prezzo' => 999, 'scontoPerc' => 24, 'sconto' => 0, 'image' => 'iphonexs.jpg'],
+                'prezzo' => 999, 'scontoPerc' => 24, 'sconto' => 1, 'image' => 'iphonexs.jpg'],
             ['nome' => 'APPLE iPhone XS MAX', 'catId' => 4, 'marca' => 'APPLE', 'dimDisplay' => 6.5, 'risDisplay' => '2688x1242', 
                 'processore' => 'Apple A12 Bionic', 'ram' => 4, 'memoria' => 256, 'schedaGraf' => 'Proprietaria Apple',
                 'fotocamera' => 'doppia fotocamera da 12 megapixel, con apertura f/1.8 (grandangolo) e apertura f/2.4 (teleobiettivo) + Frontale 7 MP, apertura f/2.2', 
@@ -197,7 +197,7 @@ class DatabaseSeeder extends Seeder
                 Grazie all’apprendimento automatico, la funzione Smart HDR è più intelligente che mai. Riconosce le persone e le elabora in modo diverso dal resto dell’immagine, così i volti hanno splendidi punti di luce, ombre d’effetto e tonalità della pelle naturali. E il tramonto sullo sfondo è spettacolare come sempre.
                 Il vetro più robusto su uno smart­phone:
                 Sia il vetro frontale che quello posteriore sono rinforzati attraverso un processo a doppio scambio ionico.',
-                'prezzo' => 839, 'scontoPerc' => 6, 'sconto' => 0, 'image' => 'iphone11.jpg'],
+                'prezzo' => 839, 'scontoPerc' => 6, 'sconto' => 1, 'image' => 'iphone11.jpg'],
             ['nome' => 'APPLE iPhone 11 Pro', 'catId' => 4, 'marca' => 'APPLE', 'dimDisplay' => 5.8, 'risDisplay' => '1125x2436', 
                 'processore' => 'Apple A13 Bionic', 'ram' => 4, 'memoria' => 256, 'schedaGraf' => 'Proprietaria Apple',
                 'fotocamera' => 'tripla fotocamera 12 megapixel, apertura f/2.4 (ultrawide), f/2.0 (tele) e f/1.8 (standard) + Frontale 12 MP, apertura f/2.2', 
@@ -261,7 +261,7 @@ class DatabaseSeeder extends Seeder
                 iPhone 11 Pro è protetto davanti e dietro dal vetro più resistente mai visto su uno smartphone e la parte posteriore è ricavata da un unico pezzo di vetro scolpito.
                 Chip A13 progettato su misura:
                 Abbiamo creato il chip A13 Bionic per migliorare l’apprendimento automatico sull’intero chip e permetterti di fare cose che con gli altri smartphone non sono possibili.',
-                'prezzo' => 1459, 'scontoPerc' => 14, 'sconto' => 0, 'image' => 'iphone11promax.jpg'],
+                'prezzo' => 1459, 'scontoPerc' => 14, 'sconto' => 1, 'image' => 'iphone11promax.jpg'],
             ['nome' => 'SAMSUNG Galaxy s10', 'catId' => 5, 'marca' => 'SAMSUNG', 'dimDisplay' => 6.1, 'risDisplay' => '1440X3040', 
                 'processore' => 'Samsung Exynos 9 Octa 9820', 'ram' => 8, 'memoria' => 128, 'schedaGraf' => 'ARM Mali-G76 MP12',
                 'fotocamera' => '12 MP Ƒ/1.5-2.4 + Zoom 2X 12 MP ƒ/2.4 + Grandangolare 16 MP ƒ/2.2 + 10 MP Ƒ/1.9', 
@@ -353,7 +353,7 @@ class DatabaseSeeder extends Seeder
                 Prestazioni incredibili con le nuove CPU/GPU/NPU
                 Abbiamo migliorato CPU, GPU e NPU per rendere ancora più intelligente il nostro smartphone, con incredibili capacità di calcolo, potenza grafica e apprendimento AI. Batteria a lunga durata con ricarica Super Fast
                 Non fermarti mai grazie alla straordinaria batteria da 4.000 mAh e ad una capacità di ricarica super veloce da 25 W.',
-                'prezzo' => 899, 'scontoPerc' => 11, 'sconto' => 0, 'image' => 'galaxys20.jpg'],
+                'prezzo' => 899, 'scontoPerc' => 11, 'sconto' => 1, 'image' => 'galaxys20.jpg'],
             ['nome' => 'SAMSUNG Galaxy s20+', 'catId' => 5, 'marca' => 'SAMSUNG', 'dimDisplay' => 6.7, 'risDisplay' => '1440X3040', 
                 'processore' => 'Samsung Exynos 990', 'ram' => 8, 'memoria' => 128, 'schedaGraf' => 'ARM Mali-G77 MP11',
                 'fotocamera' => '12 MP Ƒ/1.8 + Zoom 3X 64 MP ƒ/2.0 + Grandangolare 12 MP ƒ/2.2 +  Frontale 10 MP Ƒ/2.2 ', 
@@ -434,7 +434,7 @@ class DatabaseSeeder extends Seeder
                 Dai più spazio ai tuoi ricordi con la memoria interna da 128 GB, espandibile fino a 512 GB con microSD. Il Processore Octa Core e la RAM di 6 GB garantiscono prestazioni fluide ed efficienti. Galaxy A71 è aggiornato ad Android 10 e riceve costantemente patch di sicurezza.
                 Proteggi i tuoi contenuti in ogni momento con la piattaforma di sicurezza a più livelli Samsung Knox che rileva manomissioni e protegge i tuoi dati. Sblocca immediatamente il tuo smartphone con il lettore di impronte digitali integrato nel display.
                 Fai ancora di più: Bixby Voice, Bixby Vision e Bixby Routines sono pronti a supportarti ad ogni passo.',
-                'prezzo' => 449, 'scontoPerc' => 11, 'sconto' => 0, 'image' => 'iphone8.jpg'],
+                'prezzo' => 449, 'scontoPerc' => 11, 'sconto' => 1, 'image' => 'iphone8.jpg'],
             ['nome' => 'HUAWEI P30 Pro', 'catId' => 5, 'marca' => 'HUAWEI', 'dimDisplay' => 6.47, 'risDisplay' => '1080x2340', 
                 'processore' => 'Huawei HiSilicon Kirin 980', 'ram' => 6, 'memoria' => 128, 'schedaGraf' => 'ARM Mali-G76 MP10',
                 'fotocamera' => '40 MP Ƒ/1.6 + Zoom 5X 8MP ƒ/3.4+ Grandangolare 20 MP ƒ/2.2 + Frontale 32 MP Ƒ/2.0', 
@@ -474,7 +474,7 @@ class DatabaseSeeder extends Seeder
                 Google Mobile Services non disponibili. Huawei P40 Pro utilizza i Huawei Mobile Services (HMS) anziché i Google Mobile Services (GMS). Il Google Play Store e le app di Google non sono preinstallate.
                 Scopri come scaricare le app trasferendole comodamente dal tuo vecchio smartphone al nuovo HUAWEI P40 Pro tramite l’app Phone Clone.
                 Crea il tuo HUAWEI ID per accedere al mondo dei servizi HUAWEI e per scaricare le migliori app dallo store ufficiale APPGallery. Scarica il motore di ricerca TrovApp per installare le tue applicazioni preferite.',
-                'prezzo' => 1049, 'scontoPerc' => 2, 'sconto' => 0, 'image' => 'p40pro.jpg'],
+                'prezzo' => 1049, 'scontoPerc' => 2, 'sconto' => 1, 'image' => 'p40pro.jpg'],
             ['nome' => 'HUAWEI P40 Lite', 'catId' => 5, 'marca' => 'HUAWEI', 'dimDisplay' => 6.4, 'risDisplay' => '1080x2310', 
                 'processore' => 'Huawei HiSilicon Kirin 810', 'ram' => 8, 'memoria' => 128, 'schedaGraf' => 'ARM Mali-G52',
                 'fotocamera' => '48 MP Ƒ/1.8 + Tof 2MP Ƒ/2.4 + Grandangolare 8 MP ƒ/2.4 + Frontale 16 MP Ƒ/2.0', 
@@ -546,7 +546,7 @@ class DatabaseSeeder extends Seeder
                 Ricarica ultra-rapida e maxi batteria
                 Mi 10 dispone della ricarica a 30W, sia cablata che wireless questo tipo di flessibilità permette di adattarsi perfettamente alle abitudini di chi decide di sceglierlo, qualsiasi esse siano. Un’ulteriore chicca di Mi 10 è la possibilità di usarlo per ricaricare altri device la ricarica wireless inversa è una funzione perfetta per chi viaggia e lavora a ritmi sostenuti. Oltre alle eccezionali possibilità di ricarica, Mi 10 dispone di una maxi batteria da 4780mAh e di un caricatore da 30W, presente direttamente nella confezione d’acquisto.
                 Numero 1 di performance e connettività 5G',
-                'prezzo' => 999, 'scontoPerc' => 10, 'sconto' => 0, 'image' => 'mi10.jpg'],
+                'prezzo' => 999, 'scontoPerc' => 10, 'sconto' => 1, 'image' => 'mi10.jpg'],
             ['nome' => 'XIAOMI Mi 10 Pro', 'catId' => 5, 'marca' => 'XIAOMI', 'dimDisplay' => 6.67, 'risDisplay' => '1080x2340', 
                 'processore' => 'Qualcomm Snapdragon 865', 'ram' => 8, 'memoria' => 256, 'schedaGraf' => 'Adreno 650',
                 'fotocamera' => '108 Ƒ/1.7 + Zoom 10X 8MP Ƒ/2.0 + Zoom 2X 12MP Ƒ/2.0 + 20 MP + Frontale 20 MP Ƒ/2.0', 
@@ -606,7 +606,7 @@ class DatabaseSeeder extends Seeder
                 Fotocamera quadrupla ultra nitida - fotocamera principale 48mp, 3x hybrid zoom, ultra quadrangolo 48mp, teleobiettivo 8mp, lente IR 5mp e fotocamera frontale 16mp; super slow motion fino a 960 fps ti farà vedere cose mai viste prima; ulteriori funzionalità: ultrashot, nightscape, studio lighting, portrait, pro mode, panorama, hdr, ai scene detection, raw image
                 8 GB ram e 128 GB di memoria interna per una performance superiore, alta velocità / processore ad alte prestazioni qualcomm snapdragon 865 con connettività 5g
                 Batteria 4510 mAh - ricarica veloce senza fili e tecnologia warp charge 30t (pronto in 20 minuti) / sistema operativo android 10',
-                'prezzo' => 919, 'scontoPerc' => 2, 'sconto' => 0, 'image' => 'oneplus8pro.jpg'],
+                'prezzo' => 919, 'scontoPerc' => 2, 'sconto' => 1, 'image' => 'oneplus8pro.jpg'],
             ['nome' => 'APPLE MacBook Air 2020', 'catId' => 6, 'marca' => 'APPLE', 'dimDisplay' => 13.3, 'risDisplay' => '2560x1600', 
                 'processore' => 'i5', 'ram' => 8, 'memoria' => 256, 'schedaGraf' => 'INTEL Iris Plus Graphics',
                 'fotocamera' => '', 
@@ -671,7 +671,7 @@ class DatabaseSeeder extends Seeder
                 Con MacBook Pro 16" il notebook raggiunge prestazioni mai viste. Il processore Intel Core i9 ti offre fino a 8 core e 16 thread di potenza di elaborazione, e grazie a un design termico evoluto può sostenere più a lungo performance ancora più elevate. E rispetto a un MacBook Pro quad-core, avrai prestazioni fino a 2,1 volte migliori. Quando esegui il layering di decine di tracce ed effetti, fai il rendering di modelli 3D o vuoi scrivere e testare codice, andrai veloce come il vento.
                 Il superpotere di plasmare la realtà:
                 La grafica AMD Radeon Pro serie 5000M garantisce prestazioni mai viste su un MacBook Pro. Nella configurazione di base, MacBook Pro 16" è oltre due volte più veloce dello stesso modello di generazione precedente: quando lavori con video Ultra HD, la riproduzione è impeccabile e i rendering sono più rapidi. E puoi anche scegliere di avere 8GB di VRAM GDDR6: rispetto alla configurazione con Radeon Pro Vega 20, vuol dire performance fino all’80% più scattanti per i lavori più impegnativi, come il color grading in DaVinci Resolve.',
-                'prezzo' => 2799, 'scontoPerc' => 7, 'sconto' => 0, 'image' => 'macbookpro16.jpg'],
+                'prezzo' => 2799, 'scontoPerc' => 7, 'sconto' => 1, 'image' => 'macbookpro16.jpg'],
             ['nome' => 'HP Spectre x360', 'catId' => 7, 'marca' => 'HP', 'dimDisplay' => 13.3, 'risDisplay' => '1920 x 1080', 
                 'processore' => 'i7', 'ram' => 8, 'memoria' => 512, 'schedaGraf' => 'INTEL Iris Plus Graphics',
                 'fotocamera' => '', 
@@ -725,7 +725,7 @@ class DatabaseSeeder extends Seeder
                 Fotocamera: /
                 OS: Windows 10', 
                 'descLong' => 'Surface Go offre ogni giorno le prestazioni di un laptop, la portabilità di un tablet e un eccezionale touchscreen con la potenza di Windows 10 Home in modalità S.¹ Cover con tasti Signature per Surface Go e Penna per Surface venduti separatamente.',
-                'prezzo' => 599, 'scontoPerc' => 17, 'sconto' => 0, 'image' => 'surfacego.jpg'],
+                'prezzo' => 599, 'scontoPerc' => 17, 'sconto' => 1, 'image' => 'surfacego.jpg'],
             ['nome' => 'MICROSOFT Surface Pro 7', 'catId' => 7, 'marca' => 'MICROSOFT', 'dimDisplay' => 12.3, 'risDisplay' => '2736x1824', 
                 'processore' => 'i7', 'ram' => 16, 'memoria' => 256, 'schedaGraf' => 'INTEL Iris Plus Graphics',
                 'fotocamera' => '', 
@@ -776,7 +776,7 @@ class DatabaseSeeder extends Seeder
                 I nostri processori di ultima generazione ti permettono di svolgere qualsiasi tipo di mansione: dai noiosi lavori giornalieri alle attività più complesse.
                 Produttività prolungata
                 Swift 3 incrementa l efficienza con una durata della batteria superiore e un design dual-storage, consentendo di eseguire le attività di elaborazione per l intera giornata.',
-                'prezzo' => 649, 'scontoPerc' => 3, 'sconto' => 0, 'image' => 'swift3.jpg'],
+                'prezzo' => 649, 'scontoPerc' => 3, 'sconto' => 1, 'image' => 'swift3.jpg'],
             ['nome' => 'HUAWEI MateBook D 15', 'catId' => 7, 'marca' => 'HUAWEI', 'dimDisplay' => 15.6, 'risDisplay' => '1920x1080', 
                 'processore' => 'Ryzer5', 'ram' => 8, 'memoria' => 256, 'schedaGraf' => 'AMD Radeon Vega 8 Condivisa',
                 'fotocamera' => '', 
@@ -849,7 +849,7 @@ class DatabaseSeeder extends Seeder
                 OS: Chrome OS', 
                 'descLong' => 'Ultra sottile e leggero: il Google Pixelbook Go è un ottimo strumento di auto-spiegazione. È progettato per essere portato con te ovunque ne abbiate bisogno. Ultra sottile e leggero, si può facilmente portare con sé il Pixelbook per lezioni, riunioni o semplicemente per la casa degli amici. E grazie allo splendido touch screen HD è possibile navigare facilmente e ogni immagine è in brillanti dettagli Ultra HD. Avvio super veloce, non aspettare.
                 Il Pixelbook Go ha la potenza di accelerare praticamente qualsiasi cosa. Si avvia in pochi secondi e il processore di 8 generazione è veloce e reattivo. Inoltre è dotato di protezione anti-virus integrata e aggiornamenti automatici, in modo che il Chromebook rimanga al sicuro e non rallenta nel corso del tempo. Fino a 12 ore di durata della batteria. Avete una lunga giornata di giorno? Il Google Pixelbook è pronto all uso. Con fino a 12 ore di durata della batteria, non dovrai più scavare il caricabatterie. E quando hai bisogno di ricaricare, avrai 2 ore di durata della batteria con soli 20 minuti di ricarica.',
-                'prezzo' => 1249, 'scontoPerc' => 8, 'sconto' => 0, 'image' => 'pixelbookgo.jpeg'],
+                'prezzo' => 1249, 'scontoPerc' => 8, 'sconto' => 1, 'image' => 'pixelbookgo.jpeg'],
             ['nome' => 'HP Chromebook 14', 'catId' => 8, 'marca' => 'HP', 'dimDisplay' => 14, 'risDisplay' => '1920x1080', 
                 'processore' => 'Intel Pentium Silver N5000', 'ram' => 4, 'memoria' => 64, 'schedaGraf' => 'INTEL UHD 605',
                 'fotocamera' => '', 
@@ -862,7 +862,7 @@ class DatabaseSeeder extends Seeder
                 Fotocamera: /
                 OS: Chrome OS', 
                 'descLong' => 'HP Chromebook 14a-na0005nl Il meglio per il lavoro e l’intrattenimento, in un unico dispositivo. Con il laptop HP Chromebook con processore Intel® ancora più veloce, display da 35,6 cm (14"), altoparlanti stereo ottimizzati da B&O e la batteria a elevata autonomia, potrai lavorare con efficienza per tutta la giornata e goderti il meglio dell’intrattenimento Creato per stupire Il display micro-edge ad alta definizione e gli altoparlanti messi a punto dagli esperti del suono di B&O offrono un’esperienza di intrattenimento straordinaria. Progettato per te Tutta la potenza e le prestazioni che ti occorrono, grazie al processore Intel®, all’ampio spazio di storage e alla batteria a elevata autonomia. Pannello antiriflesso Anche se esposto alla luce diretta del sole, il monitor antiriflesso consente di godersi al meglio i contenuti preferiti. La speciale superficie riduce il riflesso dei raggi solari sul display quando ci si trova all’aria aperta. Scheda grafica Intel® UHD 605 Riproduci contenuti in 4K e divertiti con i tuoi giochi preferiti in 720p, senza la necessità di una scheda grafica dedicata. Con le eccezionali prestazioni grafiche Intel® UHD, questo PC farà la differenza in ogni tua attività. Un esperienza audio potente Con gli HP Dual Speakers e l audio custom-tuned in collaborazione con gli esperti B&O, l intrattenimento diventa estremamente coinvolgente e autentico. Lasciati trasportare dal suono. Display con cornice sottile Il design è studiato per aumentare l area di visualizzazione, inserendo uno schermo più grande in una cornice più piccola. Design sottile Porta sempre con te questo PC sottile e leggero anche in viaggio. Quando il tuo PC è in grado di seguirti ovunque, essere produttivi e divertirsi non è mai stato così facile. Google Assistant Lavora meglio e più velocemente con Google Assistant. Lavora in multitasking, interroga e controlla le funzioni per l’intrattenimento del laptop Chromebook, mantenendo le mani sempre libere grazie all’innovativo controllo vocale.',
-                'prezzo' => 1249, 'scontoPerc' => 8, 'sconto' => 0, 'image' => 'hpchromebook14.jpg'],
+                'prezzo' => 1249, 'scontoPerc' => 8, 'sconto' => 1, 'image' => 'hpchromebook14.jpg'],
             ['nome' => 'ASUS Chromebook Flip 12.5', 'catId' => 8, 'marca' => 'ASUS', 'dimDisplay' => 12.5, 'risDisplay' => '1920x1080', 
                 'processore' => 'Intel Pentium 4415Y', 'ram' => 8, 'memoria' => 64, 'schedaGraf' => 'Intel HD Graphics 515',
                 'fotocamera' => '', 
@@ -901,7 +901,7 @@ class DatabaseSeeder extends Seeder
                 Apple Pencil moltiplica il potenziale di iPad mini trasformandolo in un taccuino digitale che puoi portare sempre con te. Prendi appunti, firma documenti, compila moduli. O fai uno schizzo, disegna e dipingi per dare forma alle tue idee più creative ovunque sei.
                 I tuoi dati sono tuoi. E solo tuoi.
                 Come tutti i prodotti Apple, iPad mini è progettato per proteggere i tuoi dati e la tua privacy. Con Touch ID è facilissimo sbloccarlo e anche fare acquisti con Apple Pay, in tutta sicurezza. Appoggia il dito sul sensore Touch ID e il gioco è fatto.',
-                'prezzo' => 629, 'scontoPerc' => 13, 'sconto' => 0, 'image' => 'ipadmini.jpeg'],
+                'prezzo' => 629, 'scontoPerc' => 13, 'sconto' => 1, 'image' => 'ipadmini.jpeg'],
             ['nome' => 'APPLE iPad Air', 'catId' => 9, 'marca' => 'APPLE', 'dimDisplay' => 10.5, 'risDisplay' => '2224x1668', 
                 'processore' => 'Apple A12 Bionic', 'ram' => 3, 'memoria' => 64, 'schedaGraf' => 'Proprietaria Apple',
                 'fotocamera' => '8MP ƒ/2.4 + Frontale 7MP ƒ/2.2', 
@@ -979,7 +979,7 @@ class DatabaseSeeder extends Seeder
                 La fotocamera frontale TrueDepth rende possibile il funzionamento di Face ID, la tecnologia di riconoscimento facciale più evoluta mai vista su un tablet (e su un computer). Ma ti permette anche di parlare con gli amici su FaceTime, di farti un selfie in modalità Ritratto, o di dare un tocco più personale alle conversazioni in Messaggi trasformandoti in un’Animoji.
                 A12Z Bionic:
                 Con il chip A12Z Bionic, iPad Pro surclassa la maggior parte dei PC portatili. Tutto quello che fai è fluido e fulmineo, dalle cose di tutti i giorni ai flussi di lavoro che richiedono un uso più intenso della grafica. E il processore grafico 8-core ti dà prestazioni al top e immagini ancora più realistiche nelle app e nei giochi dove la velocità è tutto.',
-                'prezzo' => 1149, 'scontoPerc' => 4, 'sconto' => 0, 'image' => 'ipadpro12.9.jpg'],
+                'prezzo' => 1149, 'scontoPerc' => 4, 'sconto' => 1, 'image' => 'ipadpro12.9.jpg'],
             ['nome' => 'HUAWEI MediaPad M5', 'catId' => 10, 'marca' => 'HUAWEI', 'dimDisplay' => 10, 'risDisplay' => '1920x1200', 
                 'processore' => 'Kirin 659', 'ram' => 3, 'memoria' => 32, 'schedaGraf' => 'ARM MALI T830 Mp2',
                 'fotocamera' => '8MP', 
@@ -1053,7 +1053,7 @@ class DatabaseSeeder extends Seeder
                 Hai dimenticato il caricabatterie? Nessun problema: la potente batteria da 7.040 mAh di Galaxy Tab S6 resiste fino a 15 ore di riproduzione video, per un’intera giornata di libertà. Quando serve, puoi contare sulla Ricarica Rapida tramite USB Tipo C e sul dock di ricarica POGO.
                 Un tuo tocco sullo schermo, ed è subito pronto
                 Lo schermo di Galaxy Tab S6 nasconde un lettore ottico di impronte digitali, per il massimo della sicurezza. Il tablet si sblocca con un semplice tocco del tuo dito, devi solo sfiorare lo schermo senza doverti ricordare alcuna password.',
-                'prezzo' => 909, 'scontoPerc' => 3, 'sconto' => 0, 'image' => 'tabs6.jpg'],
+                'prezzo' => 909, 'scontoPerc' => 3, 'sconto' => 1, 'image' => 'tabs6.jpg'],
 
         ]);
 
