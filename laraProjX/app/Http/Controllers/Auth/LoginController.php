@@ -23,16 +23,51 @@ class LoginController extends Controller
 
     /**
      * Where to redirect users after login.
-     *
+     * valutando il tipo di utente che effettua l'accesso
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected function redirectTo() {
+        $ruolo = auth()->user()->ruolo;
+        switch($ruolo){
+            case 'user' : return '/user';
+                break;
+            case 'admin': return '/admin';
+                break;
+            case 'staff': return '/staff';
+                break;
+            default : return '/';
+        }
+    }
 
     /**
-     * Create a new controller instance.
+     * override del metodo che definisce quale elemento va ad identificare 
+     * l'username dell'utente che di default sarebbe l'email 
      *
-     * @return void
+     * 
      */
+    
+    public function username() {
+        return 'username';
+        
+    }
+    
+    
+    
+    
+    
+    
+    /**
+     * Create a new controller instance.
+     * @return void
+     * 
+     * definisce chi puo attivare queste funzioni
+     * quindi dall'utente guest perchè siamo in fase di registrazione
+     * attraverso il method chaining concateniamo all'attivazione del middleware 
+     * con il parametro guest anche il metodo except con parametro logout in modo 
+     * tale che possa essere usato da qualcunque utente
+     * 
+     */
+    
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
