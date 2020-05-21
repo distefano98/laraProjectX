@@ -25,20 +25,19 @@ class RegisterController extends Controller
     use RegistersUsers;
 
     /**
-     * Where to redirect users after registration.
+     * Where to redirect users after registration (Homepage).
      *
      * @var string
      */
-    protected $redirectTo = 'homepage';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
      *
      * @return void
      * 
-     * costruttore dell'oggetto definendo un parametro guest predefinito in laravel 
-     * associato a utenti non registrati al sito
-     * puo essere attivata solamente se a richiederlo è un utente non registrato
+     * Constructor defines a "guest" parameter, associated with unregistered users
+     * it is set up only when an unregistered user make a request
      */
     public function __construct()
     {
@@ -72,17 +71,17 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return \App\Models\Resources\User
      */
     protected function create(array $data)
     {
         return User::create([
-            'nome' => $data['name'],
-            'cognome' => $data['name'],
+            'nome' => $data['nome'],
+            'cognome' => $data['cognome'],
             'email' => $data['email'],
-            'residenza' => $data['email'],
-            'occupazione' => $data['email'],
-            'username' => $data['email'],
+            'residenza' => $data['residenza'],
+            'occupazione' => $data['occupazione'],
+            'username' => $data['username'],
             'password' => Hash::make($data['password']),
         ]);
     }

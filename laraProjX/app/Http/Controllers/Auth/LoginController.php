@@ -23,7 +23,7 @@ class LoginController extends Controller
 
     /**
      * Where to redirect users after login.
-     * valutando il tipo di utente che effettua l'accesso
+     * Define homepage for different users
      * @var string
      */
     protected function redirectTo() {
@@ -41,8 +41,7 @@ class LoginController extends Controller
 
     /**
      * override del metodo che definisce quale elemento va ad identificare 
-     * l'username dell'utente che di default sarebbe l'email 
-     *
+     * l'username dell'utente che di default sarebbe l'email
      * 
      */
     

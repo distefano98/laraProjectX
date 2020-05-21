@@ -69,13 +69,13 @@ Route::get('/selMacroCateg/{macroCatId}/selCat/{catId}', 'PublicController@showC
 
 // --------------------------- users -------------------------------------------
 Route::get('/user', 'UserController@index')
-        ->name('user');
+        ->name('user')->middleware('can:isUser');
 
 Route::get('/staff', 'StaffController@index')
-        ->name('staff');
+        ->name('staff')->middleware('can:isStaff');
 
 Route::get('/admin', 'AdminController@index')
-        ->name('admin');
+        ->name('admin')->middleware('can:isAdmin');
 
 //----------------------------------------------------------------------------
 
