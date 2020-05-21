@@ -7,5 +7,10 @@
                 <li class="header__menu__item"> <a href="{{ route('where') }}"> DOVE SIAMO </a></li>
                 <li class="header__menu__item"> <a href="{{ route('where') }}"> AREA RISERVATA </a></li>
                 
-                <li class="header__menu__item"> <a href=""> LOGOUT </a></li>
+ @auth
+        <li class="header__menu__item" ><a href="" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">LOGOUT</a></li>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            {{ csrf_field() }}
+        </form>
+@endauth    
     </ul>
