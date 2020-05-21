@@ -60,7 +60,7 @@ class RegisterController extends Controller
             'cognome' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'residenza' => ['required', 'string', 'max:255'],
-            'occupazione' => ['required', 'string', 'max:255'],
+            'occupazione' => ['required', 'string', 'max:255', 'select'],
             'username' => ['required', 'string', 'max:255','unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
                         
