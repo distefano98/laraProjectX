@@ -41,7 +41,7 @@ class LoginController extends Controller
 
     /**
      * override del metodo che definisce quale elemento va ad identificare 
-     * l'username dell'utente che di default sarebbe l'email
+     * l'username dell'utente (poicchè di default sarebbe l'email)
      * 
      */
     

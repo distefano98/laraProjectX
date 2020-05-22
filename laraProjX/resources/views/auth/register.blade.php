@@ -82,6 +82,11 @@
         @endif
     </div>   
         
+     <div  class="register_form_item">
+        {{ Form::label('password-confirm', 'Conferma password', ['class' => 'label-form']) }}
+        {{ Form::password('password_confirmation', ['class' => 'input', 'id' => 'password_confirmation']) }}
+    </div>
+        
     <div class="register_form_item">
         {{ Form::label('residenza', 'Residenza', ['class' => 'label-form']) }}
         {{ Form::text('residenza', '' , ['class' => 'input', 'id' => 'residenza']) }}
@@ -96,7 +101,7 @@
         
     <div class="register_form_item">
         {{ Form::label('occupazione', 'Occupazione', ['class' => 'label-form']) }}
-        {{ Form::select('occupazione', ['1' => 'Ingegnere', '2' => 'Operaio', '3' => 'Architetto', '4' => 'Professore', '5' => 'Libero Professionista', '6' => 'Tecnico', '7' => 'Impiegato', '8' => 'Altro'],['class' => 'input', 'id' => 'occupazione']) }}
+        {{ Form::select('occupazione', ['ingegnere' => 'Ingegnere', 'operaio' => 'Operaio', 'architetto' => 'Architetto', 'professore' => 'Professore', 'libero professionista' => 'Libero Professionista', 'tecnico' => 'Tecnico', 'impiegato' => 'Impiegato', 'altro' => 'Altro'],['class' => 'input', 'id' => 'occupazione']) }}
         @if ($errors->first('occupazione'))
             <ul class="errors">
                 @foreach ($errors->get('occupazione') as $message)

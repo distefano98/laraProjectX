@@ -4,9 +4,10 @@
 
 @section('content')
 <div class="static">
-    <h3>Area Utente</h3>
+    <h2>Area Utente</h2>
     <p>Benvenuto {{ Auth::user()->nome }} {{ Auth::user()->cognome }}</p>
-    s
+    <p>Consulta il catalogo e scegli ciò che fa per te! Attualmente sono disponibili pi&ugrave; di 50 prodotti</p>
+    
 </div>
 @endsection
 
