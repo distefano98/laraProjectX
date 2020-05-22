@@ -6,80 +6,103 @@
                 
 @endsection
 
-
 @section('title', 'REGISTRATI')
+
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+<div class="login_form">
+    <h3>REGISTRAZIONE</h3>
+        {{Form::open(array('route' => 'register', 'class' => 'contact-form')) }}
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <div class="register_form">
+        {{ Form::label('nome', 'Nome', ['class' => 'label-form']) }} 
+        {{ Form::text('nome', '', ['class' => 'input','id' => 'nome']) }}
+        @if ($errors->first('nome'))
+            <ul class="errors">
+                @foreach ($errors->get('nome') as $message)
+                <li>{{ $message }}</li>
+                @endforeach
+            </ul>
+        @endif
     </div>
+    
+    <div  class="register_form">
+        {{ Form::label('cognome', 'Cognome', ['class' => 'label-form']) }}
+        {{ Form::text('cognome', '', ['class' => 'input', 'id' => 'cognome']) }}
+        @if ($errors->first('cognome'))
+            <ul class="errors">
+                @foreach ($errors->get('cognome') as $message)
+                <li>{{ $message }}</li>
+                @endforeach
+            </ul>
+        @endif
+    </div>
+    
+    <div class="register_form">
+        {{ Form::label('email', 'Email', ['class' => 'label-form']) }}
+        {{ Form::text('email', '', ['class' => 'input', 'id' => 'email']) }}
+        @if ($errors->first('email'))
+            <ul class="errors">
+                @foreach ($errors->get('email') as $message)
+                <li>{{ $message }}</li>
+                @endforeach
+            </ul>
+        @endif
+    </div>
+        
+    <div class="register_form">
+        {{ Form::label('username', 'Username', ['class' => 'label-form']) }}
+        {{ Form::text('username', '', ['class' => 'input','id' => 'username']) }}
+        @if ($errors->first('username'))
+            <ul class="errors">
+                @foreach ($errors->get('username') as $message)
+                <li>{{ $message }}</li>
+                @endforeach
+            </ul>
+        @endif
+    </div>
+
+    <div class="register_form">
+        {{ Form::label('password', 'Password', ['class' => 'label-form']) }}
+        {{ Form::password('password', ['class' => 'input', 'id' => 'password']) }}
+        @if ($errors->first('password'))
+            <ul class="errors">
+                @foreach ($errors->get('password') as $message)
+                <li>{{ $message }}</li>
+                @endforeach
+            </ul>
+        @endif
+    </div>   
+        
+    <div class="register_form">
+        {{ Form::label('residenza', 'Residenza', ['class' => 'label-form']) }}
+        {{ Form::text('residenza', '' , ['class' => 'input', 'id' => 'residenza']) }}
+        @if ($errors->first('residenza'))
+            <ul class="errors">
+                @foreach ($errors->get('residenza') as $message)
+                <li>{{ $message }}</li>
+                @endforeach
+            </ul>
+        @endif
+    </div> 
+        
+    <div class="register_form">
+        {{ Form::label('occupazione', 'Occupazione', ['class' => 'label-form']) }}
+        {{ Form::select('occupazione', ['1' => 'Ingegnere', '2' => 'Operaio', '3' => 'Architetto', '4' => 'Professore', '5' => 'Libero Professionista', '6' => 'Tecnico', '7' => 'Impiegato', '8' => 'Altro'],['class' => 'input', 'id' => 'occupazione']) }}
+        @if ($errors->first('occupazione'))
+            <ul class="errors">
+                @foreach ($errors->get('occupazione') as $message)
+                <li>{{ $message }}</li>
+                @endforeach
+            </ul>
+        @endif
+    </div> 
+        
+    <div class="pulsante">                
+        {{ Form::submit('Registrami', ['class' => 'button-form']) }}
+    </div>
+
+    {{Form::close() }}
+
 </div>
 @endsection

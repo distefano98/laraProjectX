@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //poniamo a 191 la dimensione di ogni stringa che i model utilizzeranno
-        //Schema::defaultStringLength(191);
+        //each string's least length (which models use) is set to 191
+        Schema::defaultStringLength(191);
     }
 }

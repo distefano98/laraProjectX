@@ -13,6 +13,7 @@
     
     <body>
         <header class="header" >
+            
             @include('layout/headerPublic')
         </header>
         

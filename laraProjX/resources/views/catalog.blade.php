@@ -56,7 +56,7 @@
                     <p>Descrizione Estesa: {!! $product->descLong !!}</p>
         </div>
          <div class="priceProd">
-                        @include('helpers/productPrice')
+           @include('helpers/productPrice')
         </div>
                 
 </div>    

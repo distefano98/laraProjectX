@@ -18,6 +18,7 @@ class AuthServiceProvider extends ServiceProvider
 
     /**
      * Register any authentication / authorization services.
+     * 3 different policies, using Facade Gate
      *
      * @return void
      */
@@ -35,7 +36,7 @@ class AuthServiceProvider extends ServiceProvider
             return $user->hasRole('user');
         });
         Gate::define('mostra-sconto',function($user){
-            return $user->hasRole(['user','admin']);
+            return $user->hasRole(['user','staff']);
         });
     }
 }
