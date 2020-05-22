@@ -1,7 +1,7 @@
 @extends('layout.publicPage')
 @section('head')
 <style>
-    .register_form{margin: auto;width: 40%;}
+    .register_form{margin: auto;width: 25%;}
     .register_form h3{text-align: center;}
     .register_form_item{text-align: center;clear: both;}
     .register_form_item input,select{float: right;}
