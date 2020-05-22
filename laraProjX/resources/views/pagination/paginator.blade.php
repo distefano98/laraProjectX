@@ -1,7 +1,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
       
 <style>
-    
+/*    
 *{
 margin: 0;
 padding: 0;
@@ -9,7 +9,7 @@ text-decoration: none;
 box-sizing: border-box;
 font-family: "Open Sans", sans-serif;
 }
-
+*/
 .body{
 background: #f1f1f1;
 }
