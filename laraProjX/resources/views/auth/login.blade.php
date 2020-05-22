@@ -2,9 +2,14 @@
 
 @section('head')
 <style>
-    .login_form{margin: auto;width: 40%;}
+    .login_form{margin: auto;width: 20%;}
     .login_form h3{font-style: italic;padding: 5%}
-    .contact-form{text-align: center;padding: 2%;border: 1px solid black;}
+    .login_form_field {clear: both;}
+    .login_form_field input{float: right;}
+    .pulsante{text-align: center;margin: 5%;}
+    .registrazione{text-align: center;font-size: larger}
+    .registrazione a{font-style: italic;color: black}
+    .errors{list-style: none;color: red}
 </style>
                 
 @endsection
@@ -46,8 +51,8 @@
    {{ Form::submit('Login', ['class' => 'button-form'])}}
      </div>
 
-<div>
-        <a href="{{ route('register') }}"> Non hai un account ? Registrati ora  </a>
+    <div class="registrazione">
+        <a href="{{ route('register') }}"> Non hai un account ? <br> Registrati ora  </a>
 </div>
 
 {{Form::close() }}

@@ -47,13 +47,13 @@
             @include('helpers/productImg', ['attrs' => 'imagefrm', 'imgFile' => $product->image]) 
         </div>
         <div class="infoProd">
-                        <h1 class="title">Prodotto: {{ $product->nome }}</h1>
-                        <p class="meta">Descrizione Breve: {{ $product->descShort }}</p>
+                        <h1 class="title"> {{ $product->nome }}</h1>
+                        <p class="meta"> {{ $product->descShort }}</p>
         </div>
         </div>
        
         <div class="textProd">
-                    <p>Descrizione Estesa: {!! $product->descLong !!}</p>
+                    <p> {!! $product->descLong !!}</p>
         </div>
          <div class="priceProd">
            @include('helpers/productPrice')
