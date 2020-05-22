@@ -76,7 +76,7 @@
         
     <div class="register_form">
         {{ Form::label('residenza', 'Residenza', ['class' => 'label-form']) }}
-        {{ Form::text('residenza', 'Città (Provincia)' , ['class' => 'input','id' => 'residenza']) }}
+        {{ Form::text('residenza', '' , ['class' => 'input', 'id' => 'residenza']) }}
         @if ($errors->first('residenza'))
             <ul class="errors">
                 @foreach ($errors->get('residenza') as $message)
@@ -88,7 +88,7 @@
         
     <div class="register_form">
         {{ Form::label('occupazione', 'Occupazione', ['class' => 'label-form']) }}
-        {{ Form::select('occupazione', [], ['class' => 'input', 'id' => 'occupazione']) }}
+        {{ Form::select('occupazione', ['1' => 'Ingegnere', '2' => 'Operaio', '3' => 'Architetto', '4' => 'Professore', '5' => 'Libero Professionista', '6' => 'Tecnico', '7' => 'Impiegato', '8' => 'Altro'],['class' => 'input', 'id' => 'occupazione']) }}
         @if ($errors->first('occupazione'))
             <ul class="errors">
                 @foreach ($errors->get('occupazione') as $message)

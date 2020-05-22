@@ -31,7 +31,7 @@
     </div>
     
     <div  class="login_form_field">
-        {{ Form::label('password', 'PASSWORD', ['class' => 'label-form']) }}
+        {{ Form::label('password', 'Password', ['class' => 'label-form']) }}
         {{ Form::password('password', ['class' => 'input', 'id' => 'password']) }}
         @if ($errors->first('password'))
             <ul class="errors">
