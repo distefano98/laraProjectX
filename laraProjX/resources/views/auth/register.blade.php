@@ -101,7 +101,7 @@
         
     <div class="register_form_item">
         {{ Form::label('occupazione', 'Occupazione', ['class' => 'label-form']) }}
-        {{ Form::select('occupazione', ['ingegnere' => 'Ingegnere', 'operaio' => 'Operaio', 'architetto' => 'Architetto', 'professore' => 'Professore', 'libero professionista' => 'Libero Professionista', 'tecnico' => 'Tecnico', 'impiegato' => 'Impiegato', 'altro' => 'Altro'],['class' => 'input', 'id' => 'occupazione']) }}
+        {{ Form::select('occupazione', ['ingegnere' => 'Ingegnere', 'operaio' => 'Operaio', 'architetto' => 'Architetto', 'professore' => 'Professore',  'tecnico' => 'Tecnico', 'impiegato' => 'Impiegato', 'altro' => 'Altro'],['class' => 'input', 'id' => 'occupazione']) }}
         @if ($errors->first('occupazione'))
             <ul class="errors">
                 @foreach ($errors->get('occupazione') as $message)
