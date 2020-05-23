@@ -37,7 +37,7 @@
    <div class="opzione">
         <ul>
             <li> MODIFICA INFORMAZIONI UTENTE </li>
-            <li><a href="{{ route('Homepage') }}">VAI AL CATALOGO</a></li>
+            <li><a href="{{ route('catalog') }}" >VAI AL CATALOGO</a></li>
         </ul>
     </div>
 
