@@ -12,8 +12,8 @@
 #card1{background-image:  url("image/card1.jpg");}
 #card2{background-image:  url("image/card2.jpg");}
 #card3{background-image:  url("image/card3.jpg");}
-.card p{height: auto;width: 80%;display: block;color: black; background-color:#d6d6d6;
-       opacity: 0.9;text-align: center; margin: auto; margin-bottom: 0;}
+.card p{height: auto;display: block;color: black; background-color:#d6d6d6;width: 100%;
+       opacity: 0.9;text-align: center; margin: auto;position: absolute;bottom: 0;}
 .descrizione_sito{  color: gray; font-family: sans-serif; float:left; background-color: #d6d6d6; }
 .descrizione_sito p{margin-left: 10%; margin-right: 10%;}
 

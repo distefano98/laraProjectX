@@ -33,9 +33,9 @@
             
             
             <div class="cover_card">
-                <section class="card" id="card1"><p> MOLTI PRODOTTI TRA LE TRE CATEGORIE PRESENTI</section>
-                <section class="card" id="card2"><p>ACCEDI O REGISTRATI PER I NOSTRI SCONTI</p> </section>
-                <section class="card" id="card3"><p>IL NOSTRO TEAM A TUA DISPOSIZIONE</p></section>
+                <section class="card" id="card1"><p> <b> CENTINAIA DI PRODOTTI </b></p></section>
+                <section class="card" id="card2"><p><b>ACCEDI O REGISTRATI PER I NOSTRI SCONTI</b></p> </section>
+                <section class="card" id="card3"><p><b>IL NOSTRO TEAM A TUA DISPOSIZIONE</b></p></section>
     
             </div>
             
