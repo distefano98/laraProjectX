@@ -30,11 +30,11 @@ class LoginController extends Controller
         $ruolo = auth()->user()->ruolo;
         switch($ruolo){
             case 'user' : return '/user';
-                break;
+               
             case 'admin': return '/admin';
-                break;
+                
             case 'staff': return '/staff';
-                break;
+                
             default : return '/';
         }
     }

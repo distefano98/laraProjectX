@@ -13,8 +13,9 @@
     
     <body>
         <header class="header" >
-            
-            @include('layout/headerPublic')
+          
+        @include('layout/headerPublic')
+  
         </header>
         
         <div class="cover">

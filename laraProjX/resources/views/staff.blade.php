@@ -1,23 +1,31 @@
 @extends('layout.staffPage')
 
-@section('title', 'Area Staff')
+@section('title', 'Staff')
 @section('head')
 <style>
+    .cover{height: auto;}
+    .areaStaff{height: 500px;width: 70%;margin: auto}
+    .areaStaff h2{text-align: center;font-family: Arial, Helvetica, sans-serif;color: #666666}
+    .areaStaff p{text-align: center;}
+    .opzione{width: 100%;height: 30%}
+    .opzione ul{list-style: none;padding: 0;width: 100%;text-align: center;}
+    .opzione ul li{display: inline-block;text-align: center ;width: 30%;  border: 0.5px solid #666666}
+    .opzione ul li a{text-decoration: none;color: black}
 </style>
 
 @endsection
 @section('content')
 <div class="areaStaff">
-    <h2>Area Staff</h2>
-    <p>Benvenuto membro del nostro staff<b> {{ Auth::staff()->nome }} {{ Auth::staff()->cognome }} </b> </p>
-    <p>Scegli se inserire, modificare o cancellare un prodotto </p>
+    <h2>Area Staff</h2> 
+    <p>Benvenuto <b> {{ Auth::user()->nome }} {{ Auth::user()->cognome }} </b> </p>
+    <p>Scegli che azione effettuare</p>
     
    
    <div class="opzione">
         <ul>
-		    <li> <a href="" >  INSERISCI UN NUOVO PRODOTTO</li>
-            <li> <a href="" >  MODIFICA UN PRODOTTO </li>
-            <li> <a href="" >  CANCELLA UN PRODOTTO</a></li>
+            <li> <a href="" >  INSERISCI NUOVO PRODOTTO </a></li>
+            <li> <a href="" >  MODIFICA  UN PRODOTTO </a> </li> 
+            <li> <a href="" >  CANCELLA UN PRODOTTO </a> </li>
         </ul>
     </div>
 
