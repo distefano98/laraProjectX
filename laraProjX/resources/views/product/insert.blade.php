@@ -14,6 +14,27 @@
     .errors{list-style: none;color: red}
 </style>
 @endsection
+@section('scripts')
+
+@parent
+<script src="{{ asset('js/functions.js') }}" ></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(function () {
+    var actionUrl = "{{ route('newproduct.store') }}";
+    var formId = 'addproduct';
+    $(":input").on('blur', function (event) {
+        var formElementId = $(this).attr('id');
+        doElemValidation(formElementId, actionUrl, formId);
+    });
+    $("#addproduct").on('submit', function (event) {
+        event.preventDefault();
+        doFormValidation(actionUrl, formId);
+    });
+});
+</script>
+
+@endsection
 @section('content')
 <div class="insert_form">
     <h3>Aggiungi un nuovo prodotto</h3>
@@ -67,7 +88,7 @@
                 {{ Form::text('dimDisplay', '', ['class' => 'input', 'id' => 'dimDisplay']) }}
                 @if ($errors->first('dimDisplay'))
                 <ul class="errors">
-                    @foreach ($errors->get('dimDisplay') as $message)
+                    @foreach ($errors->get('dimensione Display') as $message)
                     <li>{{ $message }}</li>
                     @endforeach
                 </ul>
@@ -79,7 +100,7 @@
                 {{ Form::text('risDisplay', '', ['class' => 'input', 'id' => 'risDisplay']) }}
                 @if ($errors->first('risDisplay'))
                 <ul class="errors">
-                    @foreach ($errors->get('risDisplay') as $message)
+                    @foreach ($errors->get('risoluzione Display') as $message)
                     <li>{{ $message }}</li>
                     @endforeach
                 </ul>
@@ -115,7 +136,7 @@
                 {{ Form::text('schedaGraf', '', ['class' => 'input', 'id' => 'schedaGraf']) }}
                 @if ($errors->first('schedaGraf'))
                 <ul class="errors">
-                    @foreach ($errors->get('schedaGraf') as $message)
+                    @foreach ($errors->get('scheda Grafica') as $message)
                     <li>{{ $message }}</li>
                     @endforeach
                 </ul>
@@ -138,7 +159,7 @@
                 {{ Form::file('image', ['class' => 'input', 'id' => 'image']) }}
                 @if ($errors->first('image'))
                 <ul class="errors">
-                    @foreach ($errors->get('image') as $message)
+                    @foreach ($errors->get('immagine') as $message)
                     <li>{{ $message }}</li>
                     @endforeach
                 </ul>
@@ -150,7 +171,7 @@
                 {{ Form::text('descShort', '', ['class' => 'input', 'id' => 'descShort']) }}
                 @if ($errors->first('descShort'))
                 <ul class="errors">
-                    @foreach ($errors->get('descShort') as $message)
+                    @foreach ($errors->get('descrizione breve') as $message)
                     <li>{{ $message }}</li>
                     @endforeach
                 </ul>
@@ -162,7 +183,7 @@
                 {{ Form::text('prezzo', '', ['class' => 'input', 'id' => 'price']) }}
                 @if ($errors->first('price'))
                 <ul class="errors">
-                    @foreach ($errors->get('price') as $message)
+                    @foreach ($errors->get('prezzo') as $message)
                     <li>{{ $message }}</li>
                     @endforeach
                 </ul>
@@ -174,7 +195,7 @@
                 {{ Form::text('scontoPerc', '', ['class' => 'input', 'id' => 'discountPerc']) }}
                 @if ($errors->first('discountPerc'))
                 <ul class="errors">
-                    @foreach ($errors->get('discountPerc') as $message)
+                    @foreach ($errors->get('percentuale sconto') as $message)
                     <li>{{ $message }}</li>
                     @endforeach
                 </ul>
@@ -191,7 +212,7 @@
                 {{ Form::textarea('descLong', '', ['class' => 'input', 'id' => 'descLong', 'rows' => 2]) }}
                 @if ($errors->first('descLong'))
                 <ul class="errors">
-                    @foreach ($errors->get('descLong') as $message)
+                    @foreach ($errors->get('descrizione estesa') as $message)
                     <li>{{ $message }}</li>
                     @endforeach
                 </ul>
