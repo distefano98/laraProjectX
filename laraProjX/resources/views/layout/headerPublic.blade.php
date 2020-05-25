@@ -8,6 +8,10 @@
     @can('isUser')
                <li class="header__menu__item"> <a href="{{ route('user') }}" > AREA RISERVATA</a></li>
     @endcan
+    
+    @can('isStaff')
+               <li class="header__menu__item"> <a href="{{ route('staff') }}" > AREA RISERVATA</a></li>
+    @endcan
     @auth
                <li class="header__menu__item"><a href="" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> LOGOUT </a></li>
         <form id="logout-form" action="{{ route('logout') }}" method="POST">

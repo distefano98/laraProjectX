@@ -68,12 +68,22 @@ Route::get('/selMacroCateg/{macroCatId}/selCat/{catId}', 'PublicController@showC
 
 
 // --------------------------- users -------------------------------------------
+
+//utente
 Route::get('/user', 'UserController@index')
         ->name('user')->middleware('can:isUser');
+//staff
 
 Route::get('/staff', 'StaffController@index')
         ->name('staff')->middleware('can:isStaff');
 
+Route::get('/staff/newproduct', 'StaffController@addProduct')
+        ->name('newproduct');
+
+Route::post('/admin/newproduct', 'StaffController@storeProduct')
+        ->name('newproduct.store');
+
+//admin
 Route::get('/admin', 'AdminController@index')
         ->name('admin')->middleware('can:isAdmin');
 

@@ -2,15 +2,57 @@
 
 namespace App\Http\Controllers;
 use App\Models\Staff;
-use Illuminate\Http\Request;
+use App\Models\Resources\Product;
 
 class StaffController extends Controller
 {
+     protected $_staffModel;
+     
      public function __construct() {
-        $this->middleware('auth');
+        $this->middleware('can:isStaff');
+        $this->_staffModel = new Staff;
     }
-
+    /* metodo che mostra homepage 
+     * degli account staff 
+     * 
+     *      */
     public function index() {
         return view('staff');
     }
+    /* metodo che visualizza la form 
+     * per l'inserimento di un nuovo
+     * prodotto
+     *      */
+     public function addProduct() {
+        $prodCats = $this->_staffModel->getProdsCats()->pluck('nome', 'catId');
+        return view('product.insert')
+                        ->with('cats', $prodCats);
+    }
+   /* metodo attivato al submit
+    * della form di inserimento
+    *      */
+    public function storeProduct(NewProductRequest $request) {
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imageName = $image->getClientOriginalName();
+        } else {
+            $imageName = NULL;
+        }
+
+        $product = new Product;
+        $product->fill($request->validated());
+        $product->image = $imageName;
+        $product->save();
+
+        if (!is_null($imageName)) {
+            $destinationPath = public_path() . '/images/products';
+            $image->move($destinationPath, $imageName);
+        };
+
+        return response()->json(['redirect' => route('staff')]);
+    }
+    
+    
+    
 }

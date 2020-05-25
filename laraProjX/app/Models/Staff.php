@@ -7,11 +7,18 @@
  */
 
 namespace App\Models;
-
+use App\Models\Resources\Category;
+use App\Models\Resources\Product;
 
 
 class Staff {
-    
-    
+    /*metodo per generare a livello di vista
+     *elenco delle possibili categorie che possono essere associate
+     * ad un certo prodotto, estraiamo tutte le categorie di prodotto 
+     * con parId diverso da zero quindi escludiamo le macrocategorie
+     *      */
+    public function getProdsCats() {
+        return Category::where('parId', '!=', 0)->get();
+    }
     
 }

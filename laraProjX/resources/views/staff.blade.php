@@ -23,7 +23,7 @@
    
    <div class="opzione">
         <ul>
-            <li> <a href="" >  INSERISCI NUOVO PRODOTTO </a></li>
+            <li> <a href="{{ route('newproduct')}}" >  INSERISCI NUOVO PRODOTTO </a></li>
             <li> <a href="" >  MODIFICA  UN PRODOTTO </a> </li> 
             <li> <a href="" >  CANCELLA UN PRODOTTO </a> </li>
         </ul>
