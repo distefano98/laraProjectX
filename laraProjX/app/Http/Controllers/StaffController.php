@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Staff;
 use App\Models\Resources\Product;
+use App\Http\Requests\NewProductRequest;
 
 class StaffController extends Controller
 {
@@ -12,13 +13,21 @@ class StaffController extends Controller
         $this->middleware('can:isStaff');
         $this->_staffModel = new Staff;
     }
+    
+    
+    
+    
     /* metodo che mostra homepage 
      * degli account staff 
      * 
      *      */
+    
     public function index() {
         return view('staff');
     }
+    
+    
+    
     /* metodo che visualizza la form 
      * per l'inserimento di un nuovo
      * prodotto
@@ -49,10 +58,10 @@ class StaffController extends Controller
             $destinationPath = public_path() . '/images/products';
             $image->move($destinationPath, $imageName);
         };
-
-        return response()->json(['redirect' => route('staff')]);
+        return redirect()->action('StaffController@index');
+       // return response()->json(['redirect' => route('staff')]);
     }
-    
+     
     
     
 }

@@ -80,7 +80,7 @@ Route::get('/staff', 'StaffController@index')
 Route::get('/staff/newproduct', 'StaffController@addProduct')
         ->name('newproduct');
 
-Route::post('/admin/newproduct', 'StaffController@storeProduct')
+Route::post('/staff/newproduct', 'StaffController@storeProduct')
         ->name('newproduct.store');
 
 //admin
