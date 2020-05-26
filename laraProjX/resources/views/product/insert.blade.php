@@ -43,9 +43,10 @@ $(function () {
     
      
             {{ Form::open(array('route' => 'newproduct.store', 'id' => 'addproduct', 'files' => true, 'class' => 'contact-form')) }}
+            
             <div  class="insert_form_item">
                 {{ Form::label('nome', 'Nome Prodotto', ['class' => 'label-input']) }}
-                {{ Form::text('nome', '', ['class' => 'input', 'id' => 'nome']) }}
+                {{ Form::text('nome', '', ['class' => 'input', 'id' => 'nome','placeholder'=>'iphone 1 ']) }}
                 @if ($errors->first('nome'))
                 <ul class="errors">
                     @foreach ($errors->get('nome') as $message)
@@ -62,7 +63,7 @@ $(function () {
 
             <div  class="insert_form_item">
                 {{ Form::label('marca', 'Marca', ['class' => 'label-input']) }}
-                {{ Form::text('marca', '', ['class' => 'input', 'id' => 'marca']) }}
+                {{ Form::text('marca', '', ['class' => 'input', 'id' => 'marca','placeholder'=>'iphone']) }}
                 @if ($errors->first('marca'))
                 <ul class="errors">
                     @foreach ($errors->get('marca') as $message)
@@ -74,7 +75,7 @@ $(function () {
             
             <div  class="insert_form_item">
                 {{ Form::label('processore', 'Processore', ['class' => 'label-input']) }}
-                {{ Form::text('processore', '', ['class' => 'input', 'id' => 'processore']) }}
+                {{ Form::text('processore', '', ['class' => 'input', 'id' => 'processore','placeholder'=>'A 1 gch']) }}
                 @if ($errors->first('processore'))
                 <ul class="errors">
                     @foreach ($errors->get('processore') as $message)
@@ -85,7 +86,7 @@ $(function () {
             </div>
             <div  class="insert_form_item">
                 {{ Form::label('dimDisplay', 'Dimensione Display', ['class' => 'label-input']) }}
-                {{ Form::text('dimDisplay', '', ['class' => 'input', 'id' => 'dimDisplay']) }}
+                {{ Form::text('dimDisplay', '', ['class' => 'input', 'id' => 'dimDisplay','placeholder'=>'2.3']) }}
                 @if ($errors->first('dimDisplay'))
                 <ul class="errors">
                     @foreach ($errors->get('dimensione Display') as $message)
@@ -97,7 +98,7 @@ $(function () {
             
             <div  class="insert_form_item">
                 {{ Form::label('risDisplay', 'Risoluzione Display', ['class' => 'label-input']) }}
-                {{ Form::text('risDisplay', '', ['class' => 'input', 'id' => 'risDisplay']) }}
+                {{ Form::text('risDisplay', '', ['class' => 'input', 'id' => 'risDisplay','placeholder'=>'230x450']) }}
                 @if ($errors->first('risDisplay'))
                 <ul class="errors">
                     @foreach ($errors->get('risoluzione Display') as $message)
@@ -109,7 +110,7 @@ $(function () {
             
             <div  class="insert_form_item">
                 {{ Form::label('ram', 'RAM', ['class' => 'label-input']) }}
-                {{ Form::text('ram', '', ['class' => 'input', 'id' => 'ram']) }}
+                {{ Form::text('ram', '', ['class' => 'input', 'id' => 'ram','placeholder'=>'1']) }}
                 @if ($errors->first('ram'))
                 <ul class="errors">
                     @foreach ($errors->get('ram') as $message)
@@ -121,7 +122,7 @@ $(function () {
             
             <div  class="insert_form_item">
                 {{ Form::label('memoria', 'Memoria', ['class' => 'label-input']) }}
-                {{ Form::text('memoria', '', ['class' => 'input', 'id' => 'memoria']) }}
+                {{ Form::text('memoria', '', ['class' => 'input', 'id' => 'memoria','placeholder'=>'20']) }}
                 @if ($errors->first('memoria'))
                 <ul class="errors">
                     @foreach ($errors->get('memoria') as $message)
@@ -133,7 +134,7 @@ $(function () {
             
             <div  class="insert_form_item">
                 {{ Form::label('schedaGraf', 'Scheda Grafica', ['class' => 'label-input']) }}
-                {{ Form::text('schedaGraf', '', ['class' => 'input', 'id' => 'schedaGraf']) }}
+                {{ Form::text('schedaGraf', '', ['class' => 'input', 'id' => 'schedaGraf','placeholder'=>'proprietaria apple']) }}
                 @if ($errors->first('schedaGraf'))
                 <ul class="errors">
                     @foreach ($errors->get('scheda Grafica') as $message)
@@ -145,7 +146,7 @@ $(function () {
             
             <div  class="insert_form_item">
                 {{ Form::label('fotocamera', 'Fotocamera', ['class' => 'label-input']) }}
-                {{ Form::text('fotocamera', '', ['class' => 'input', 'id' => 'fotocamera']) }}
+                {{ Form::text('fotocamera', '', ['class' => 'input', 'id' => 'fotocamera','placeholder'=>'1 mp , f 1.4 .... ']) }}
                 @if ($errors->first('fotocamera'))
                 <ul class="errors">
                     @foreach ($errors->get('fotocamera') as $message)
@@ -168,7 +169,7 @@ $(function () {
 
             <div  class="insert_form_item">
                 {{ Form::label('descShort', 'Descrizione Breve', ['class' => 'label-input']) }}
-                {{ Form::text('descShort', '', ['class' => 'input', 'id' => 'descShort']) }}
+                {{ Form::text('descShort', '', ['class' => 'input', 'id' => 'descShort','placeholder'=>'....']) }}
                 @if ($errors->first('descShort'))
                 <ul class="errors">
                     @foreach ($errors->get('descrizione breve') as $message)
@@ -180,7 +181,7 @@ $(function () {
 
             <div  class="insert_form_item">
                 {{ Form::label('prezzo', 'Prezzo', ['class' => 'label-input']) }}
-                {{ Form::text('prezzo', '', ['class' => 'input', 'id' => 'price']) }}
+                {{ Form::text('prezzo', '', ['class' => 'input', 'id' => 'price','placeholder'=>'200']) }}
                 @if ($errors->first('price'))
                 <ul class="errors">
                     @foreach ($errors->get('prezzo') as $message)
@@ -192,7 +193,7 @@ $(function () {
 
             <div  class="insert_form_item">
                 {{ Form::label('scontoPerc', 'Sconto (%)', ['class' => 'label-input']) }}
-                {{ Form::text('scontoPerc', '', ['class' => 'input', 'id' => 'discountPerc']) }}
+                {{ Form::text('scontoPerc', '', ['class' => 'input', 'id' => 'discountPerc','placeholder'=>'20']) }}
                 @if ($errors->first('discountPerc'))
                 <ul class="errors">
                     @foreach ($errors->get('percentuale sconto') as $message)

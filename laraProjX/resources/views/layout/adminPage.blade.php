@@ -15,7 +15,7 @@
     
     <body>
         <header class="header" >
-            @include('layout/headerStaff')
+            @include('layout/headerAdmin')
         </header>
         
         <div class="cover">

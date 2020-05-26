@@ -20,6 +20,10 @@
                 <li class="header__menu__item"> <a href="{{ route('catalog') }}"> CATALOGO </a></li>
                <li class="header__menu__item"> <a href="{{ route('staff') }}" > AREA RISERVATA</a></li>
     @endcan
+    @can('isAdmin')
+                <li class="header__menu__item"> <a href="{{ route('catalog') }}"> CATALOGO </a></li>
+               <li class="header__menu__item"> <a href="{{ route('admin') }}" > AREA RISERVATA</a></li>
+    @endcan
     @auth
                <li class="header__menu__item"><a href="" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> LOGOUT </a></li>
         <form id="logout-form" action="{{ route('logout') }}" method="POST">
