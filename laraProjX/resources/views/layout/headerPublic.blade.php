@@ -1,15 +1,23 @@
 <a href="{{ route('Homepage') }}" class="header__logo" > <img width="250" src="{{ asset('css/image/logo.png') }}">  </a>
-   
+    
     <ul class="header__menu">
+        @guest
                 <li class="header__menu__item"> <a href="{{ route('Homepage') }}"> HOME </a></li>
                 <li class="header__menu__item"> <a href="{{ route('catalog') }}"> CATALOGO </a></li>
                 <li class="header__menu__item"> <a href="{{ route('who') }}"> CHI SIAMO </a></li>
                 <li class="header__menu__item"> <a href="{{ route('where') }}"> DOVE SIAMO </a></li>
-    @can('isUser')
-               <li class="header__menu__item"> <a href="{{ route('user') }}" > AREA RISERVATA</a></li>
+        @endguest
+    
+        @can('isUser')
+                <li class="header__menu__item"> <a href="{{ route('Homepage') }}"> HOME </a></li>
+                <li class="header__menu__item"> <a href="{{ route('catalog') }}"> CATALOGO </a></li>
+                <li class="header__menu__item"> <a href="{{ route('who') }}"> CHI SIAMO </a></li>
+                <li class="header__menu__item"> <a href="{{ route('where') }}"> DOVE SIAMO </a></li>
+                <li class="header__menu__item"> <a href="{{ route('user') }}" > AREA RISERVATA</a></li>
     @endcan
     
     @can('isStaff')
+                <li class="header__menu__item"> <a href="{{ route('catalog') }}"> CATALOGO </a></li>
                <li class="header__menu__item"> <a href="{{ route('staff') }}" > AREA RISERVATA</a></li>
     @endcan
     @auth
