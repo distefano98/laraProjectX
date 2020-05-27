@@ -79,6 +79,12 @@ Route::get('/user/changepassword', 'UserController@changePassword')
 Route::post('/user/changepassword', 'UserController@storePassword')
         ->name('changepassword.store');
 
+Route::get('/user/changeinfo', 'UserController@changeInfo')
+       ->name('changeinfo');
+
+Route::post('/user/changeinfo', 'UserController@storeInfo')
+        ->name('changeinfo.store');
+
 //staff
 
 Route::get('/staff', 'StaffController@index')
