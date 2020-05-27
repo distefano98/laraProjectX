@@ -72,6 +72,13 @@ Route::get('/selMacroCateg/{macroCatId}/selCat/{catId}', 'PublicController@showC
 //utente
 Route::get('/user', 'UserController@index')
         ->name('user')->middleware('can:isUser');
+
+Route::get('/user/changepassword', 'UserController@changePassword')
+       ->name('changepassword');
+
+Route::post('/user/changepassword', 'UserController@storePassword')
+        ->name('changepassword.store');
+
 //staff
 
 Route::get('/staff', 'StaffController@index')
