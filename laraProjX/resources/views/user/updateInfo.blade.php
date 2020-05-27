@@ -2,11 +2,11 @@
 @section('head')
 <style>
     
-    .register_form{margin: auto;width: 30%;}
-    .register_form h3{text-align: center;}
-    .register_form_item{text-align: center;clear: both;}
-    .register_form_item input,select{float: right;}
-    .register_form_item label{float: left}
+    .update_form{margin: auto;width: 30%;}
+    .update_form h3{text-align: center;}
+    .update_form_item{text-align: center;clear: both;}
+    .update_form_item input,select{float: right;}
+    .update_form_item label{float: left}
     .pulsante{text-align: center;margin:8%}
     
     .errors{list-style: none;color: red}
