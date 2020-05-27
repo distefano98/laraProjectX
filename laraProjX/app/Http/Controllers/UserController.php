@@ -25,14 +25,14 @@ class UserController extends Controller
     {
         $request->validate([
             'current_password' => ['required', new MatchOldPassword],
-            'new_password' => ['required'],
-            'new_confirm_password' => ['same:new_password'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+           
         ]);
    
         User::find(auth()->user()->id)->update(['password'=> Hash::make($request->new_password)]);
-         
-        dd('Modifica Password avvenuta con successo');
+        
         return redirect()->action('UserController@index');
+               
     }
 }
 

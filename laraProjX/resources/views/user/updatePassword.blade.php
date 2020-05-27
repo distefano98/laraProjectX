@@ -1,57 +1,66 @@
 @extends('layout.userPage')
+
+@section('title', 'modifica password')
 @section('head')
 <style>
+    .cover{height: auto}
+    .update_form{margin: auto;width: 40%;height: 500px;}
+    .update_form h3{font-style: italic;padding: 5%;text-align: center}
+    .update_form_item {text-align: center;clear: both;}
+    .update_form_item label{text-align: center;float: left;}
+    .update_form_item  input{float: right;}
+    .pulsante{text-align: center;margin: 8%;}
     
-   
+    .errors{list-style: none;color: red}
 </style>
-                
 @endsection
 
-@section('title', 'MODIFICA PASSWORD')
 
 @section('content')
-
 <div class="update_form">
     <h3>MODIFICA PASSWORD</h3>
-       <form method="POST" action="{{ route('changepassword.store') }}">
-                        @csrf 
-   
-                         @foreach ($errors->all() as $error)
-                            <p class="text-danger">{{ $error }}</p>
-                         @endforeach 
-  
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">Current Password</label>
-  
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="current_password" autocomplete="current-password">
-                            </div>
-                        </div>
-  
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">New Password</label>
-  
-                            <div class="col-md-6">
-                                <input id="new_password" type="password" class="form-control" name="new_password" autocomplete="current-password">
-                            </div>
-                        </div>
-  
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">New Confirm Password</label>
+    {{ Form::open(array('route' => 'changepassword.store', 'id' => 'changePassword', 'files' => true, 'class' => 'contact-form')) }}
+         
+         <div class="update_form_item">
+        {{ Form::label('password', 'Password Attuale', ['class' => 'label-form']) }}
+        {{ Form::password('password',   ['class' => 'input','name'=>'current_password', 'id' => 'current_password']) }}
+        
+        @if ($errors)
+            <ul class="errors">
+                @foreach ($errors->get('current_password') as $message)
+                <li>{{ $message }}</li>
+                @endforeach
+            </ul>
+        @endif
+    </div>   
     
-                            <div class="col-md-6">
-                                <input id="new_confirm_password" type="password" class="form-control" name="new_confirm_password" autocomplete="current-password">
-                            </div>
-                        </div>
+     <div class="update_form_item">
+        {{ Form::label('password', 'Password', ['class' => 'label-form']) }}
+        {{ Form::password('password', ['class' => 'input', 'id' => 'password']) }}
+        @if ($errors->first('password'))
+            <ul class="errors">
+                @foreach ($errors->get('password') as $message)
+                <li>{{ $message }}</li>
+                @endforeach
+            </ul>
+        @endif
+    </div>   
+        
+     <div  class="update_form_item">
+        {{ Form::label('password-confirm', 'Conferma password', ['class' => 'label-form']) }}
+        {{ Form::password('password_confirmation', ['class' => 'input', 'id' => 'password_confirmation']) }}
+    </div>
+        
+  
+            <div class="pulsante">                
+                {{ Form::submit('Modifica Password', ['class' => 'form-btn1']) }}
+            </div>
+            
+            {{ Form::close() }}
+       
    
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Update Password
-                                </button>
-                            </div>
-                        </div>
-                    </form>
 
 </div>
 @endsection
+
+

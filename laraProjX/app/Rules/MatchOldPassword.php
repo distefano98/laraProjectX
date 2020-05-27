@@ -29,4 +29,5 @@ class MatchOldPassword implements Rule
     {
         return 'La password attuale è errata';
     }
+    
 }
