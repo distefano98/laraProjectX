@@ -31,7 +31,8 @@ class StaffController extends Controller
     /* metodo che visualizza la form 
      * per l'inserimento di un nuovo
      * prodotto
-     *      */
+     *
+    */
      public function addProduct() {
         $prodCats = $this->_staffModel->getProdsCats()->pluck('nome', 'catId');
         return view('product.insert')
@@ -39,7 +40,8 @@ class StaffController extends Controller
     }
    /* metodo attivato al submit
     * della form di inserimento
-    *      */
+    *
+   */
     public function storeProduct(NewProductRequest $request) {
 
         if ($request->hasFile('image')) {

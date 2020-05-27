@@ -83,7 +83,7 @@
     </div> 
         
     <div class="pulsante">                
-        {{ Form::submit('APPLICA MODIFCHE', ['class' => 'button-form']) }}
+        {{ Form::submit('Applica Modifiche', ['class' => 'button-form']) }}
     </div>
 
     {{Form::close() }}
