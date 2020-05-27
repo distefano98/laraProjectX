@@ -34,5 +34,35 @@ class UserController extends Controller
         return redirect()->action('UserController@index');
                
     }
+    
+      public function changeInfo()
+    {
+        return view('user.updateInfo');
+    } 
+    public function storeInfo(Request $request)
+    {
+        $request->validate([
+            'nome' => ['required', 'string', 'max:255'],
+            'cognome' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'residenza' => ['required', 'string', 'max:255'],
+            'occupazione' => ['required', 'string', 'max:255'],
+          
+        ]);
+   
+        User::find(auth()->user()->id)->update([
+            'nome'=> $request->nome,
+             'cognome'=> $request->cognome,
+             'email'=> $request->email,
+             'residenza'=> $request->residenza,
+             'occupazione'=> $request->occupazione,
+                
+                
+                
+                ]);
+        
+        return redirect()->action('UserController@index');
+               
+    }
 }
 

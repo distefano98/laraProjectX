@@ -36,7 +36,7 @@
    
    <div class="opzione">
         <ul>
-            <li><a href=""> MODIFICA INFORMAZIONI UTENTE </a></li>
+            <li><a href="{{route('changeinfo')}}"> MODIFICA INFORMAZIONI UTENTE </a></li>
             <li><a href="{{route('changepassword')}}" > MODIFICA PASSWORD </a> </li>
         </ul>
     </div>

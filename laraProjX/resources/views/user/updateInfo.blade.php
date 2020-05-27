@@ -18,11 +18,11 @@
 
 @section('content')
 
-<div class="register_form">
+<div class="update_form">
     <h3>MODIFICA CREDENZIALI</h3>
         {{Form::open(array('route' => 'changeinfo.store', 'id' => 'changeInfo', 'files' => true, 'class' => 'contact-form')) }}
 
-    <div class="register_form_item">
+    <div class="update_form_item">
         {{ Form::label('nome', 'Nome', ['class' => 'label-form']) }} 
         {{ Form::text('nome', Auth::user()->nome, ['class' => 'input','id' => 'nome']) }}
         @if ($errors->first('nome'))
@@ -34,7 +34,7 @@
         @endif
     </div>
     
-    <div  class="register_form_item">
+    <div  class="update_form_item">
         {{ Form::label('cognome', 'Cognome', ['class' => 'label-form']) }}
         {{ Form::text('cognome', Auth::user()->cognome, ['class' => 'input', 'id' => 'cognome']) }}
         @if ($errors->first('cognome'))
@@ -46,7 +46,7 @@
         @endif
     </div>
     
-    <div class="register_form_item">
+    <div class="update_form_item">
         {{ Form::label('email', 'Email', ['class' => 'label-form']) }}
         {{ Form::text('email', Auth::user()->email, ['class' => 'input', 'id' => 'email']) }}
         @if ($errors->first('email'))
@@ -58,7 +58,7 @@
         @endif
     </div>
       
-    <div class="register_form_item">
+    <div class="update_form_item">
         {{ Form::label('residenza', 'Residenza', ['class' => 'label-form']) }}
         {{ Form::text('residenza',  Auth::user()->residenza, ['class' => 'input', 'id' => 'residenza']) }}
         @if ($errors->first('residenza'))
@@ -70,7 +70,7 @@
         @endif
     </div> 
         
-    <div class="register_form_item">
+    <div class="update_form_item">
         {{ Form::label('occupazione', 'Occupazione', ['class' => 'label-form']) }}
         {{ Form::select('occupazione', ['ingegnere' => 'Ingegnere', 'operaio' => 'Operaio', 'architetto' => 'Architetto', 'professore' => 'Professore',  'tecnico' => 'Tecnico', 'impiegato' => 'Impiegato', 'altro' => 'Altro'],['class' => 'input', 'id' => 'occupazione', 'name' => Auth::user()->occupazione]) }}
         @if ($errors->first('occupazione'))
@@ -83,7 +83,7 @@
     </div> 
         
     <div class="pulsante">                
-        {{ Form::submit('Registrami', ['class' => 'button-form']) }}
+        {{ Form::submit('APPLICA MODIFCHE', ['class' => 'button-form']) }}
     </div>
 
     {{Form::close() }}
