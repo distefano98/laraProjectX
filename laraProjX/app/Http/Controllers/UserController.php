@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Resources\User;
 use Illuminate\Http\Request;
-use App\Rules\MatchOldPassword;
+use App\Http\Rules\MatchOldPassword;
 use Illuminate\Support\Facades\Hash;
 
 
