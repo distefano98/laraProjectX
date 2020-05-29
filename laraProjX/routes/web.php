@@ -64,6 +64,9 @@ Route::get('/selMacroCateg/{macroCatId}', 'PublicController@showMacroCategProds'
 Route::get('/selMacroCateg/{macroCatId}/selCat/{catId}', 'PublicController@showCategProds')
         ->name('catalogCateg');
 
+Route::get('/product/{prodId}','PublicController@showProduct')
+        ->name('showproduct');
+
 // ------------------------------------------------------------------------------
 
 

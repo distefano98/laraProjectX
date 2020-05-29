@@ -68,4 +68,9 @@ class PublicController extends Controller
                         ->with('products', $prods);
     }
     
+     public function showProduct($prodId){
+        $product = $this->__catalogoModel->getProdById([$prodId]);
+        return view('product.schedaProdotto')
+            ->with('product', $product);
+    }
 }

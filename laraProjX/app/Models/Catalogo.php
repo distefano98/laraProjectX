@@ -31,4 +31,7 @@ class Catalogo extends Model
         return $prods->paginate($paged);
     }
 
+    public function getProdById($prodId) {
+        return Product::whereIn('prodId', $prodId)->get()->first();
+    }
 }

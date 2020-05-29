@@ -1,3 +1,4 @@
+
 @can('mostra-sconto')
 
 <p class="price">  {{ number_format($product->getPrice($product->sconto), 2, ',', '.') }} € </p>
