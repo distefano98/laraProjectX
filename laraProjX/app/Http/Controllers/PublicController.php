@@ -19,7 +19,7 @@ class PublicController extends Controller
         $macroCategs = $this->__catalogoModel->getMacroCategs();
         
         //Prodotti di tutte le Macrocategorie
-        $prods = $this->__catalogoModel->getProdsByCateg($macroCategs->map->only(['catId']), 3, false);
+        $prods = $this->__catalogoModel->getProdsByCateg($macroCategs->map->only(['catId']), 5, false);
 
         return view('catalog')
                         ->with('macroCategories', $macroCategs)
