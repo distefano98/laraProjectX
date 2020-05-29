@@ -28,6 +28,7 @@
 .prod{position: relative; width: 80%;height: auto;margin: 20px auto 0px; background-color: #eeeeee; border-radius: 20px}
 
 .prod_top{width: 100%;height: 300px;position: relative;}
+.prod_top2{width: 100%;height: 500px;position: relative;}
 
 .imgProd{display: block;float: left;width: 30%;height: 100%;}
 .imgProd > img { width: 100%; height: 100%; border-radius: 20px 0 0 0; }

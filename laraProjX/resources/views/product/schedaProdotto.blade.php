@@ -15,17 +15,31 @@
 @section('content')
 
  <div class="prod">
-        <div class="prod_top">
+        <div class="prod_top2">
+           
         <div class="imgProd">
             @include('helpers/productImg', ['attrs' => 'imagefrm', 'imgFile' => $product->image]) 
         </div>
         <div class="infoProd">
-            <h1 class="title">  {{ $product->nome }} </h1>
-                        <p class="meta"> {{ $product->descShort }}</p>
+            <h1 class="title">  {{ $product->nome }} </h1> 
+            <h2 class="title">  Specifiche </h1> 
+            
+                        <p class="meta"> Marca: {{ $product->marca }}</p>
+                        <p class="meta"> Processore: {{ $product->processore }}</p>
+                        <p class="meta"> Dimensioni Display: {{ $product->dimDisplay }}</p>
+                        <p class="meta"> Risoluzione Display: {{ $product->risDisplay }}</p>
+                        <p class="meta"> Ram: {{ $product->ram }}</p>
+                        <p class="meta"> Memoria: {{ $product->memoria }}</p>
+                        <p class="meta"> Scheda Grafica: {{ $product->schedaGraf }}</p>
+                        <p class="meta"> Fotocamera: {{ $product->fotocamera }}</p>
+                        
+                        
+                        
         </div>
         </div>
        
         <div class="textProd">
+             <h2 class="title">  Descrizione </h1>      
                     <p> {!! $product->descLong !!}</p>
         </div>
          <div class="priceProd">
