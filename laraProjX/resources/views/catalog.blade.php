@@ -10,8 +10,9 @@
 @endsection
 
 @section('content')
-
-    
+@can('isStaff')
+<div> <h2 style="text-align: center;font-style: italic;color: gray;text-decoration: underline">Per Modificare o cancellare un prodotto vai alla sua scheda prodotto </h2> </div>
+@endcan    
      <div class="categorie">
         <ul class="categorie_item">
                  
