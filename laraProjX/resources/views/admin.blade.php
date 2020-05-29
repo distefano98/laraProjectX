@@ -23,13 +23,16 @@
    
    <div class="opzione">
         <ul>
-            <li> <a href="" > NUOVO MEMBRO STAFF </a></li>
-            <li> <a href="" >  MODIFICA MEMBRO STAFF </a> </li> 
-            <li> <a href="" >  CANCELLA MEMBRO STAFF </a> </li>
-            <li> <a href="" >  CANCELLA UTENTE </a> </li>
+            <li> <a href="{{route('showstaff')}}" > GESTIONE STAFF </a></li>
+            <li> <a href="{{route('showuser')}}" >  GESTIONE UTENTI </a> </li> 
+            <li> <a href="{{route('admin')}}"> HOME </a>
         </ul>
     </div>
 
+    <div>
+   
+  @yield('funzioni')
+    </div>
     
 </div>
 @endsection

@@ -103,5 +103,12 @@ Route::post('/staff/newproduct', 'StaffController@storeProduct')
 Route::get('/admin', 'AdminController@index')
         ->name('admin')->middleware('can:isAdmin');
 
+Route::get('/showstaff', 'AdminController@showStaff')
+        ->name('showstaff');
+
+Route::get('/showusers', 'AdminController@showUser')
+        ->name('showuser');
+
+
 //----------------------------------------------------------------------------
 
