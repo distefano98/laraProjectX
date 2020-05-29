@@ -1,6 +1,6 @@
 @extends('layout.staffPage')
 
-@section('title', 'inserimento prodotto')
+@section('title', 'Inserimento prodotto')
 @section('head')
 <style>
     .cover {height: auto;}

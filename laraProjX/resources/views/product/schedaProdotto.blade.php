@@ -1,6 +1,6 @@
 @extends('layout.publicPage')
 
-@section('title','Catalogo')
+@section('title', $product->nome )
 
 @section('head')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/style_catalogo.css') }}" >
@@ -20,7 +20,7 @@
             @include('helpers/productImg', ['attrs' => 'imagefrm', 'imgFile' => $product->image]) 
         </div>
         <div class="infoProd">
-            <h1 class="title">  {{ $product->nome }}</a></h1>
+            <h1 class="title">  {{ $product->nome }} </h1>
                         <p class="meta"> {{ $product->descShort }}</p>
         </div>
         </div>

@@ -1,6 +1,6 @@
 @extends('layout.adminPage')
 
-@section('title', 'Amministratore')
+@section('title', 'Area Amministratore')
 @section('head')
 <style>
     .cover{height: auto;}
