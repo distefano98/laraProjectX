@@ -22,12 +22,12 @@
 <script>
 $(function () {
     var actionUrl = "{{ route('newproduct.store') }}";
-    var formId = 'addproduct';
+    var formId = 'newproduct';
     $(":input").on('blur', function (event) {
         var formElementId = $(this).attr('id');
         doElemValidation(formElementId, actionUrl, formId);
     });
-    $("#addproduct").on('submit', function (event) {
+    $("#newproduct").on('submit', function (event) {
         event.preventDefault();
         doFormValidation(actionUrl, formId);
     });
@@ -35,6 +35,7 @@ $(function () {
 </script>
 
 @endsection
+
 @section('content')
 <div class="insert_form">
     <h3>Aggiungi un nuovo prodotto</h3>
@@ -42,7 +43,7 @@ $(function () {
 
     
      
-            {{ Form::open(array('route' => 'newproduct.store', 'id' => 'addproduct', 'files' => true, 'class' => 'contact-form')) }}
+            {{ Form::open(array('route' => 'newproduct.store', 'id' => 'newproduct', 'files' => true, 'class' => 'contact-form')) }}
             
             <div  class="insert_form_item">
                 {{ Form::label('nome', 'Nome Prodotto', ['class' => 'label-input']) }}
@@ -52,7 +53,7 @@ $(function () {
 
             <div  class="insert_form_item">
                 {{ Form::label('catId', 'Categoria', ['class' => 'label-input']) }}
-                {{ Form::select('catId', $cats, '', ['class' => 'input','id' => 'catId']) }}
+                {{ Form::select('catId', $cats, '', ['class' => 'input', 'id' => 'catId']) }}
             </div>
 
             <div  class="insert_form_item">

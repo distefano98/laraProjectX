@@ -99,6 +99,12 @@ Route::get('/staff/newproduct', 'StaffController@addProduct')
 Route::post('/staff/newproduct', 'StaffController@storeProduct')
         ->name('newproduct.store');
 
+Route::get('/staff/changeproduct/{prodId}', 'StaffController@changeProduct')
+       ->name('changeproduct');
+
+Route::post('/staff/changeproduct/{prodId}', 'StaffController@updateProduct')
+        ->name('changeproduct.update');
+
 //admin
 Route::get('/admin', 'AdminController@index')
         ->name('admin')->middleware('can:isAdmin');

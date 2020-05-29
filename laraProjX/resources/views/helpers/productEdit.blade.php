@@ -1,7 +1,7 @@
 @can('isStaff')
 
-<input type="submit" value="Modifica Prodotto" name="Modifica Prodotto" />
+<a href=" {{ route('changeproduct', [$product->prodId]) }} " name="Modifica Prodotto" ><input type="submit" value="Modifica Prodotto" name="modifica_prodotto" /></a>
 
-<input type="submit" value="Cancella Prodotto" name="Cancella Prodotto" />
+<input type="submit" value="Cancella Prodotto" name="cancella_rodotto" />
 
 @endcan

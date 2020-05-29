@@ -39,6 +39,7 @@ class UserController extends Controller
     {
         return view('user.updateInfo');
     } 
+    
     public function storeInfo(Request $request)
     {
         $request->validate([
