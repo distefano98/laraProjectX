@@ -15,7 +15,7 @@
    <th>Occupazione</th>
    <th>Username</th>
    <th>Data Creazione</th>
-  
+   <th>Cancella</th>
   </tr>
  </thead>
  <tbody>
@@ -29,7 +29,7 @@
       <td>{{$user->occupazione}} </td>
       <td>{{$user->username}} </td>
       <td>{{$user->created_at}} </td>
-      
+       <td> <a href="{{route('deleteuser' , [$user->id]) }}"> <input type="submit" value="Cancella" name="Cancella" /> </a></td>
     </tr>
  @endforeach
  </tbody>

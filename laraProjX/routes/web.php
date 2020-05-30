@@ -130,5 +130,8 @@ Route::post('/updatestaff/{id}','AdminController@storeUpdateStaff')
 Route::get('/deletestaff/{id}','AdminController@deleteStaff')
         ->name('deletestaff');
 
+Route::get('/deleteuser/{id}','AdminController@deleteUser')
+        ->name('deleteuser');
+
 //----------------------------------------------------------------------------
 
