@@ -17,12 +17,12 @@
 @endsection
 @section('scripts')
 
-@parent
+
 <script src="{{ asset('js/functions.js') }}" ></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
 $(function () {
-    var actionUrl = "{{ route('updatestaff.store', [$user->id]) }}";
+    var actionUrl = "{{ route('updatestaff.store', $user->id) }}";
     var formId = 'updatestaff';
     $(":input").on('blur', function (event) {
         var formElementId = $(this).attr('id');
@@ -42,7 +42,7 @@ $(function () {
 
 <div class="update_form">
     <h3>MODIFICA MEMBRO STAFF</h3>
-        {{Form::open(array('route' => ['updatestaff.store', $user->id], 'id' => 'updateStaff', 'files' => true, 'class' => 'contact-form')) }}
+        {{Form::open(array('route' => ['updatestaff.store', $user->id], 'id' => 'updatestaff', 'files' => true, 'class' => 'contact-form')) }}
 
     <div class="update_form_item">
         {{ Form::label('nome', 'Nome', ['class' => 'label-form']) }} 

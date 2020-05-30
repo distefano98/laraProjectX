@@ -109,8 +109,11 @@ class AdminController extends Controller
     }
     
     
-    public function deleteUser(){
+    public function deleteUser($id){
+        $user = User::findOrFail($id);
+        $user->delete();
         
+        return response()->json(['redirect' => route('showuser')]);
         
     }
     
