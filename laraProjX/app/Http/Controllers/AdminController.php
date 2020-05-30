@@ -104,7 +104,7 @@ class AdminController extends Controller
         $staff = User::findOrFail($id);
         $staff->delete();
         
-        return redirect()->action('AdminController@index');
+        return redirect()->action('AdminController@showStaff');
         //return response()->json(['redirect' => route('showstaff')]);
     }
 
@@ -131,7 +131,7 @@ class AdminController extends Controller
         $user = User::findOrFail($id);
         $user->delete();
         
-        return redirect()->action('AdminController@index');
+        return redirect()->action('AdminController@showUser');
         //return response()->json(['redirect' => route('showuser')]);
         
     }
