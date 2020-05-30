@@ -59,9 +59,7 @@ class AdminController extends Controller
              'username'=> $request->username,
              'password'=> Hash::make($request->password),
              'ruolo' => 'staff',
-             'email' => '',
-             'occupazione' =>'',
-             'residenza' => '',
+             
         ]);
         
        return view ('admin');

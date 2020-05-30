@@ -15,12 +15,16 @@
 @section('content')
 
  <div class="prod">
-        <div class="prod_top2">
-           
+        
+     
         <div class="imgProd2">
             @include('helpers/productImg', ['attrs' => 'imagefrm', 'imgFile' => $product->image]) 
         </div>
+            <div class="priceProd2">
+           @include('helpers/productPrice')
+        </div>
         <div class="infoProd">
+             
             <h1 class="title">  {{ $product->nome }} </h1> 
             <h2 class="title">  Specifiche </h1> 
             
@@ -36,15 +40,13 @@
                         
                         
         </div>
-        </div>
+         
        
         <div class="textProd">
-             <h2 class="title">  Descrizione </h1>      
+             <h2>  Descrizione </h2>      
                     <p> {!! $product->descLong !!}</p>
         </div>
-         <div class="priceProd2">
-           @include('helpers/productPrice')
-        </div>
+        
      
      <div class="bottoni">
          @include('helpers/productEdit')
@@ -53,3 +55,6 @@
  </div>         
 
 @endsection
+
+
+

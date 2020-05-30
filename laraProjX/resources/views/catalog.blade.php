@@ -43,19 +43,20 @@
  @isset($products)
     @foreach ($products as $product)
     <div class="prod">
-        <div class="prod_top">
+        
         <div class="imgProd">
             @include('helpers/productImg', ['attrs' => 'imagefrm', 'imgFile' => $product->image]) 
+        </div>
+        <div class="priceProd">
+           @include('helpers/productPrice')
+        
         </div>
         <div class="infoProd">
             <h1 class="title"> <a id="titolo" href="{{ route('showproduct', [$product->prodId]) }}"style="text-decoration: none; color: #F75D59"> {{ $product->nome }}</a></h1>
             <h2> <a>Descrizione Breve</a></h2>
                         <p class="meta"> {{ $product->descShort }}</p>
         </div>
-            <div class="priceProd">
-           @include('helpers/productPrice')
-        </div>
-        </div>
+            
        
         
          
