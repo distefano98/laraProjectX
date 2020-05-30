@@ -22,7 +22,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
 $(function () {
-    var actionUrl = "{{ route('updatestaff.store', $user->id) }}";
+    var actionUrl = "{{ route('updatestaff.store', [$user->id]) }}";
     var formId = 'updatestaff';
     $(":input").on('blur', function (event) {
         var formElementId = $(this).attr('id');

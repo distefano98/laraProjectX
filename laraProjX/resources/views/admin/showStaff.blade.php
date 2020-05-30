@@ -25,8 +25,8 @@
       <td>{{$user->cognome}} </td>
       <td>{{$user->username}} </td>
       
-      <td> <a href="{{route('updatestaff',[$user->id])}}">  <input type="submit" value="Modifica" name="Modifica" /> </a></td>
-      <td> <a href="{{route('deletestaff' , [$user->id]) }}"> <input type="submit" value="Cancella" name="Cancella" /> </a></td>
+      <td> <a href="{{route('updatestaff', [$user->id])}}">  <input type="submit" value="Modifica" name="Modifica" /> </a></td>
+      <td> <a href="{{route('deletestaff' , [$user->id]) }}"> <input title="delete" type="submit" value="Cancella" name="Cancella" /> </a></td>
       
     </tr>
  @endforeach

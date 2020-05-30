@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\Resources\User; 
 use App\Models\Admin;
 use Illuminate\Support\Facades\Hash;
-use App\Http\Requests\StaffRequest;
 
 
 class AdminController extends Controller
@@ -107,7 +106,8 @@ class AdminController extends Controller
         $staff = User::findOrFail($id);
         $staff->delete();
         
-        return response()->json(['redirect' => route('showstaff')]);
+        return redirect()->action('AdminController@index');
+        //return response()->json(['redirect' => route('showstaff')]);
     }
 
    
@@ -133,7 +133,8 @@ class AdminController extends Controller
         $user = User::findOrFail($id);
         $user->delete();
         
-        return response()->json(['redirect' => route('showuser')]);
+        return redirect()->action('AdminController@index');
+        //return response()->json(['redirect' => route('showuser')]);
         
     }
     
