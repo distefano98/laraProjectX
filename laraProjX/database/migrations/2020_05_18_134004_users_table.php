@@ -17,11 +17,11 @@ class UsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('nome');
             $table->string('cognome');
-            $table->string('email');
+            $table->string('email')->nullable();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('residenza',20);
+            $table->string('residenza',20)->nullable();
             $table->date('nascita')->nullable();
-            $table->string('occupazione',20);
+            $table->string('occupazione',20)->nullable();
             $table->string('username',20);
             $table->string('password');
             $table->string('ruolo',10)->default('user');

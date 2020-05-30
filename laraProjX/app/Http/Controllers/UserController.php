@@ -47,6 +47,7 @@ class UserController extends Controller
             'cognome' => ['required', 'string', 'max:255'],
             'residenza' => ['required', 'string', 'max:255'],
             'occupazione' => ['required', 'string', 'max:255'],
+            'nascita' => ['date','before:now'],   
         ]);
         if (!(User::find(auth()->user()->id)->email == $request->email )) {
         $request->validate([
@@ -65,6 +66,7 @@ class UserController extends Controller
              'email'=> $request->email,
              'residenza'=> $request->residenza,
              'occupazione'=> $request->occupazione,
+            'nascita'=> $request->nascita,
                 ]);
         
          return response()->json(['redirect' => route('user')]);

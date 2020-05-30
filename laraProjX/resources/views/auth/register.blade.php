@@ -88,6 +88,18 @@
     </div>
         
     <div class="register_form_item">
+        {{Form::label('nascita','Data di nascita',['class'=>'label-form'])}}
+        {{ Form::date('nascita',now()) }}
+        @if ($errors->first('nascita'))
+            <ul class="errors">
+                @foreach ($errors->get('nascita') as $message)
+                <li>{{ $message }}</li>
+                @endforeach
+            </ul>
+        @endif
+    </div>
+        
+    <div class="register_form_item">
         {{ Form::label('residenza', 'Residenza', ['class' => 'label-form']) }}
         {{ Form::text('residenza', '' , ['class' => 'input', 'id' => 'residenza']) }}
         @if ($errors->first('residenza'))

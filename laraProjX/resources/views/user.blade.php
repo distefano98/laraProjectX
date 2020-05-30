@@ -28,6 +28,7 @@
         <p>Nome : <b> {{ Auth::user()->nome }} </b> </p>
         <p>Cognome : <b> {{ Auth::user()->cognome }} </b> </p>
         <p>Username : <b> {{ Auth::user()->username }} </b> </p>
+         <p>Data di nascita : <b> {{ Auth::user()->nascita }} </b> </p>
         <p>Email : <b> {{ Auth::user()->email }} </b> </p>
         <p>Residenza : <b> {{ Auth::user()->residenza }} </b> </p>
         <p>Occupazione : <b> {{ Auth::user()->occupazione }} </b> </p>

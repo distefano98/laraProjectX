@@ -59,7 +59,12 @@ $(function () {
         {{ Form::text('email', Auth::user()->email, ['class' => 'input', 'id' => 'email']) }}
        
     </div>
-      
+    
+    <div class="update_form_item"> 
+    {{Form::label('nascita','Data di nascita',['class'=>'label-form'])}}
+        {{ Form::date('nascita',now()) }}
+    </div> 
+        
     <div class="update_form_item">
         {{ Form::label('residenza', 'Residenza', ['class' => 'label-form']) }}
         {{ Form::text('residenza',  Auth::user()->residenza, ['class' => 'input', 'id' => 'residenza']) }}
