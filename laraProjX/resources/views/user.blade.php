@@ -31,7 +31,7 @@
         <p>Email : <b> {{ Auth::user()->email }} </b> </p>
         <p>Residenza : <b> {{ Auth::user()->residenza }} </b> </p>
         <p>Occupazione : <b> {{ Auth::user()->occupazione }} </b> </p>
-      
+        
     </div>
    
    <div class="opzione">

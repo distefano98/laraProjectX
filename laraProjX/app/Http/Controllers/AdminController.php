@@ -94,7 +94,6 @@ class AdminController extends Controller
         $staff->fill([
              'nome'=> $request->nome,
              'cognome'=> $request->cognome,
-             
              'password'=> Hash::make($request->password),
         ]);
         $staff->save();
