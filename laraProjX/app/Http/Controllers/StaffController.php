@@ -108,4 +108,15 @@ class StaffController extends Controller
         //return redirect()->action('StaffController@index');
         return response()->json(['redirect' => route('staff')]);
     }
+    
+    /* metodo che cancella un prodotto
+     *
+    */
+     public function deleteProduct($prodId) {
+        
+        $product = Product::findOrFail($prodId);
+        $product->delete();
+        
+        return response()->json(['redirect' => route('catalog')]);
+    }
 }
