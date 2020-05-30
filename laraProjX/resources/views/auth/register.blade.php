@@ -88,8 +88,8 @@
     </div>
         
     <div class="register_form_item">
-        {{Form::label('nascita','Data di nascita',['class'=>'label-form'])}}
-        {{ Form::date('nascita',now()) }}
+        {{ Form::label('nascita','Data di nascita',['class'=>'label-form'])}}
+        {{ Form::date('nascita', now(), ['class' => 'input', 'id' => 'nascita']) }}
         @if ($errors->first('nascita'))
             <ul class="errors">
                 @foreach ($errors->get('nascita') as $message)
