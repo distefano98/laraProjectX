@@ -105,9 +105,6 @@ Route::get('/staff/changeproduct/{prodId}', 'StaffController@changeProduct')
 Route::post('/staff/changeproduct/{prodId}', 'StaffController@updateProduct')
         ->name('changeproduct.update');
 
-Route::get('/deleteproduct/{prodId}','StaffController@deleteProduct')
-        ->name('deleteproduct');
-
 //admin
 Route::get('/admin', 'AdminController@index')
         ->name('admin')->middleware('can:isAdmin');
