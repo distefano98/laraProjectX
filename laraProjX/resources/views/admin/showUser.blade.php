@@ -5,7 +5,7 @@
 
 @section('funzioni')
 
-<table  style="margin: auto;border: 1;" border=" 1"; class="table table-hover">
+<table  style="margin: auto;border: 1;" border=" 1" class="table table-hover">
   <thead>
   <tr>
    <th>Nome</th>

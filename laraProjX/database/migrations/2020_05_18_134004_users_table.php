@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Users extends Migration
+class UsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -20,6 +20,7 @@ class Users extends Migration
             $table->string('email');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('residenza',20);
+            $table->date('nascita')->nullable();
             $table->string('occupazione',20);
             $table->string('username',20);
             $table->string('password');
