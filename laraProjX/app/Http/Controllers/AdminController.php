@@ -8,6 +8,7 @@ use App\Models\Admin;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\NewStaffRequest;
 
+
 class AdminController extends Controller
 {
       protected $__adminModel;
@@ -81,8 +82,12 @@ class AdminController extends Controller
 }
     
     
-    public function deleteStaff() {
-       
+    public function deleteStaff($id) {
+        
+        $staff = User::findOrFail($id);
+        $staff->delete();
+        
+        return response()->json(['redirect' => route('showstaff')]);
     }
 
    

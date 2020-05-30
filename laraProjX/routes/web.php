@@ -127,6 +127,8 @@ Route::get('/updatestaff/{id}','AdminController@updateStaff')
 Route::post('/updatestaff/{id}','AdminController@storeUpdateStaff')
         ->name('updatestaff.store');
 
+Route::get('/deletestaff/{id}','AdminController@deleteStaff')
+        ->name('deletestaff');
 
 //----------------------------------------------------------------------------
 
