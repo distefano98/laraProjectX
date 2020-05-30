@@ -67,7 +67,7 @@ class UserController extends Controller
              'occupazione'=> $request->occupazione,
                 ]);
         
-        return redirect()->action('UserController@index');
+         return response()->json(['redirect' => route('user')]);
     }
 
 }
