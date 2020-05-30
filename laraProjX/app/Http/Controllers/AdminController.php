@@ -81,7 +81,7 @@ class AdminController extends Controller
     
     
     
-     public function storeUpdateStaff(NewStaffRequest $request , $id) {
+     public function storeUpdateStaff(StaffRequest $request , $id) {
         
          
         $staff = User::findOrFail($id);
