@@ -86,7 +86,7 @@ class StaffController extends Controller
    */
     public function updateProduct(NewProductRequest $request, $prodId) {
         
-        $product = Product::findOrFail($prodId);                        //cerca e trova il prodotto con il codice prodotto corrispondente (altrimenti presenta errore)
+        $product = Product::findOrFail($prodId);      //cerca e trova il prodotto con il codice prodotto corrispondente (altrimenti presenta errore)
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = $image->getClientOriginalName();

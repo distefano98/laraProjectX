@@ -10,7 +10,7 @@ namespace App\Models;
 use App\Models\Resources\Category;
 
 
-class Staff {
+class Staff {   
     /*metodo per generare a livello di vista
      *elenco delle possibili categorie che possono essere associate
      * ad un certo prodotto, estraiamo tutte le categorie di prodotto 

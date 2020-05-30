@@ -15,64 +15,56 @@
 </style>
                 
 @endsection
+@section('scripts')
 
+@parent
+<script src="{{ asset('js/functions.js') }}" ></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(function () {
+    var actionUrl = "{{ route('updatestaff.store', [$user->id]) }}";
+    var formId = 'updatestaff';
+    $(":input").on('blur', function (event) {
+        var formElementId = $(this).attr('id');
+        doElemValidation(formElementId, actionUrl, formId);
+    });
+    $("#updatestaff").on('submit', function (event) {
+        event.preventDefault();
+        doFormValidation(actionUrl, formId);
+    });
+});
+</script>
+
+@endsection
 @section('title', 'Modifica Membro Staff')
 
 @section('content')
 
 <div class="update_form">
     <h3>MODIFICA MEMBRO STAFF</h3>
-        {{Form::open(array('route' => 'editstaff.store)', 'id' => 'edistStaff', 'files' => true, 'class' => 'contact-form')) }}
+        {{Form::open(array('route' => ['updatestaff.store', $user->id], 'id' => 'updateStaff', 'files' => true, 'class' => 'contact-form')) }}
 
     <div class="update_form_item">
         {{ Form::label('nome', 'Nome', ['class' => 'label-form']) }} 
-        {{ Form::text('nome', '', ['class' => 'input','id' => 'nome']) }}
-        @if ($errors->first('nome'))
-            <ul class="errors">
-                @foreach ($errors->get('nome') as $message)
-                <li>{{ $message }}</li>
-                @endforeach
-            </ul>
-        @endif
+        {{ Form::text('nome', $user->nome , ['class' => 'input','id' => 'nome']) }}
+        
     </div>
     
     <div  class="update_form_item">
         {{ Form::label('cognome', 'Cognome', ['class' => 'label-form']) }}
-        {{ Form::text('cognome', Auth::user()->cognome, ['class' => 'input', 'id' => 'cognome']) }}
-        @if ($errors->first('cognome'))
-            <ul class="errors">
-                @foreach ($errors->get('cognome') as $message)
-                <li>{{ $message }}</li>
-                @endforeach
-            </ul>
-        @endif
+        {{ Form::text('cognome', $user->cognome, ['class' => 'input', 'id' => 'cognome']) }}
+        
     </div>
     
    
         
         
-    <div class="update_form_item">
-        {{ Form::label('username', 'Username', ['class' => 'label-form']) }}
-        {{ Form::text('username', Auth::user()->username, ['class' => 'input', 'id' => 'username']) }}
-        @if ($errors->first('email'))
-            <ul class="errors">
-                @foreach ($errors->get('email') as $message)
-                <li>{{ $message }}</li>
-                @endforeach
-            </ul>
-        @endif
-    </div>
+    
       
      <div class="update_form_item">
         {{ Form::label('password', 'Password', ['class' => 'label-form']) }}
         {{ Form::password('password', ['class' => 'input', 'id' => 'password']) }}
-        @if ($errors->first('password'))
-            <ul class="errors">
-                @foreach ($errors->get('password') as $message)
-                <li>{{ $message }}</li>
-                @endforeach
-            </ul>
-        @endif
+        
     </div>   
         
      <div  class="update_form_item">

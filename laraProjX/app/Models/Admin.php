@@ -12,8 +12,8 @@ use App\Models\Staff;
 
 class Admin {
     
-    public function getUserId($id){
+    public function getId($id){
         
-       return User::whereIn('id', $id)->get();
+       return User::whereIn('id', $id)->get()->first();
     }
 }

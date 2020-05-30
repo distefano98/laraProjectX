@@ -14,6 +14,7 @@
 </style>
 
 @endsection
+
 @section('content')
 <div class="areaAdmin">
     <h2>Area Amministratore</h2> 

@@ -115,6 +115,18 @@ Route::get('/showstaff', 'AdminController@showStaff')
 Route::get('/showusers', 'AdminController@showUser')
         ->name('showuser');
 
+Route::get('/newstaff', 'AdminController@createNewStaff')
+        ->name('newstaff');
+
+Route::post('/newstaff', 'AdminController@storeNewStaff')
+        ->name('newstaff.store');
+
+Route::get('/updatestaff/{id}','AdminController@updateStaff')
+        ->name('updatestaff');
+
+Route::post('/updatestaff/{id}','AdminController@storeUpdateStaff')
+        ->name('updatestaff.store');
+
 
 //----------------------------------------------------------------------------
 
