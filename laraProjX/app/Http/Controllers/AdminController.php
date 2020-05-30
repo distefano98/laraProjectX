@@ -81,11 +81,22 @@ class AdminController extends Controller
     
     
     
-     public function storeUpdateStaff(StaffRequest $request , $id) {
-        
+     public function storeUpdateStaff(Request $request , $id) {
+        $request->validate(
+                [
+            'nome' => ['required', 'string', 'max:255'],
+            'cognome' => ['required', 'string', 'max:255'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            
+            ]);
          
         $staff = User::findOrFail($id);
-        $staff->fill($request->validated());
+        $staff->fill([
+             'nome'=> $request->nome,
+             'cognome'=> $request->cognome,
+             
+             'password'=> Hash::make($request->password),
+        ]);
         $staff->save();
         
         return response()->json(['redirect' => route('showstaff')]);
