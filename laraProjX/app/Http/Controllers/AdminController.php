@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Resources\User; 
 use App\Models\Admin;
 use Illuminate\Support\Facades\Hash;
-use App\Http\Requests\NewStaffRequest;
+use App\Http\Requests\StaffRequest;
 
 
 class AdminController extends Controller
@@ -40,7 +40,18 @@ class AdminController extends Controller
     
     
     
-    public function storeNewStaff(NewStaffRequest $request){
+    public function storeNewStaff(Request $request){
+        
+        $request->validate(
+                [
+            'nome' => ['required', 'string', 'max:255'],
+            'cognome' => ['required', 'string', 'max:255'],
+            'username' => ['required', 'string', 'min:5','unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            
+            ]);
+        
+        
         
         User::create([
             
@@ -71,9 +82,8 @@ class AdminController extends Controller
     
     
      public function storeUpdateStaff(NewStaffRequest $request , $id) {
+        
          
-        
-        
         $staff = User::findOrFail($id);
         $staff->fill($request->validated());
         $staff->save();

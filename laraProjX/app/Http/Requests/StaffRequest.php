@@ -39,7 +39,6 @@ class NewStaffRequest extends FormRequest {
         return [
             'nome' => ['required', 'string', 'max:255'],
             'cognome' => ['required', 'string', 'max:255'],
-          
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             
             ];
