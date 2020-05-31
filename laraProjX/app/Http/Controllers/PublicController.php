@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Http\Request;
 use App\Models\Catalogo;
 
 
@@ -72,5 +72,26 @@ class PublicController extends Controller
         $product = $this->__catalogoModel->getProdById([$prodId]);
         return view('product.schedaProdotto')
             ->with('product', $product);
+    }
+    
+    
+    public function search(Request $request) {
+       //Categorie
+        $macroCategs = $this->__catalogoModel->getMacroCategs();
+
+        //Sottocategorie
+        $subCategs = $this->__catalogoModel->getCategsByParId([$macroCategs]);
+	
+        //Prodotti
+	$validated = $request->validate([
+        'term' => ['required', 'max:30'],
+        ]);
+        $prods = $this->__catalogoModel->getProdsByTerm([$validated['term']]);
+	
+
+        return view('catalog')
+                        ->with('macroCategories', $macroCategs)
+                        ->with('subCategories', $subCategs)
+                        ->with('products', $prods);
     }
 }

@@ -6,10 +6,18 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/style_catalogo.css') }}" >
 <style>
     .cover {height: auto;}
+    .content_search{ overflow: hidden}
+    .serchbar{width: 304px;float: right;}
+    .form-text{padding: 6px;margin-top: 8px;font-size: 17px;border: none;}
+    .pulsante{ float: right;padding: 6px 10px;margin-top: 8px;margin-right: 16px;background: #ddd;font-size: 17px;border: none;cursor: pointer;}
 </style> 
+
 @endsection
 
 @section('content')
+
+
+
 @can('isStaff')
 <div> <h2 style="text-align: center;font-style: italic;color: gray;text-decoration: underline">Per Modificare o cancellare un prodotto vai alla sua scheda prodotto </h2> </div>
 @endcan    
@@ -41,6 +49,14 @@
     
 
  @isset($products)
+ 
+ <div class="content_search">
+  {{ Form::open(array('route' => 'search', 'class' => 'searchbar')) }}
+  {{ Form::text('term', null, ['placeholder' => 'ES. fotocamera 12 MP','class'=>'form-text']) }}
+  {{ Form::submit('CERCA',['class'=>'pulsante']) }}
+  {{ Form::close() }}
+</div>
+ 
     @foreach ($products as $product)
     <div class="prod">
         
