@@ -111,6 +111,10 @@ Route::post('/staff/changeproduct/{prodId}', 'StaffController@updateProduct')
 Route::get('/deleteproduct/{prodId}','StaffController@deleteProduct')
         ->name('deleteproduct');
 
+Route::get('/showcategory', 'StaffController@showCategory')
+        ->name('showcategory');
+
+
 //admin
 Route::get('/admin', 'AdminController@index')
         ->name('admin')->middleware('can:isAdmin');

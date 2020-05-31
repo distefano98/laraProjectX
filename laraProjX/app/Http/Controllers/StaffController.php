@@ -5,6 +5,7 @@ use App\Models\Staff;
 use App\Models\Resources\Product;
 use App\Models\Catalogo;
 use App\Http\Requests\NewProductRequest;
+use App\Models\Resources\Category;
 
 class StaffController extends Controller
 {
@@ -120,4 +121,26 @@ class StaffController extends Controller
         return redirect()->action('StaffController@index');
         //return response()->json(['redirect' => route('catalog')]);
     }
-}
+    
+    public function showCategory() {                    
+
+          $macroCategs = $this->_staffModel->getCategs();
+         $sottoCategs= $this->_staffModel->getProdsCats();
+         
+           return view ('staff.showCategory')
+           ->with('macroCategories', $macroCategs)
+           ->with('sottoCategs', $sottoCategs);
+           
+          
+
+    }
+    
+   
+    
+    
+    
+    
+    
+    
+
+    }

@@ -11,7 +11,7 @@
 
 #card1{background-image:  url("image/card1.jpg");}
 #card2{background-image:  url("image/card2.jpg");}
-#card3{background-image:  url("image/card3.jpg");}
+#card3{background-image:  url("image/pagamenti.png");}
 .card p{height: auto;display: block;color: black; background-color:#d6d6d6;width: 100%;
        opacity: 0.9;text-align: center; margin: auto;position: absolute;bottom: 0;}
 .descrizione_sito{  color: gray; font-family: sans-serif; float:left; background-color: #d6d6d6; }

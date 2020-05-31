@@ -35,7 +35,7 @@
             <div class="cover_card">
                 <section class="card" id="card1"><p> <b> CENTINAIA DI PRODOTTI </b></p></section>
                 <section class="card" id="card2"><p><b>ACCEDI O REGISTRATI PER I NOSTRI SCONTI</b></p> </section>
-                <section class="card" id="card3"><p><b>IL NOSTRO TEAM A TUA DISPOSIZIONE</b></p></section>
+                <section class="card" id="card3"><p><b> SCEGLI IL METODO DI PAGAMENTO CHE PREFERISCI</b></p></section>
     
             </div>
             

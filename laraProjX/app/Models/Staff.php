@@ -20,4 +20,10 @@ class Staff {
         return Category::where('parId', '!=', 0)->get();
     }
     
+    
+    
+     public function getCategs() {
+        return Category::where('parId', 0)->get();
+    }
+
 }

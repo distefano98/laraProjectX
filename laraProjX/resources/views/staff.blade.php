@@ -25,9 +25,10 @@
         <ul>
             <li> <a href="{{ route('newproduct')}}" >  INSERISCI NUOVO PRODOTTO </a></li>
             <li> <a href="{{ route('catalog')}}" >  GESTIONE PRODOTTI </a> </li> 
-            <li> <a href="" >  GESTIONE CATEGORIE </a> </li>
+            <li> <a href="{{ route('showcategory')}}">  GESTIONE CATEGORIE </a> </li>
         </ul>
     </div>
+    @yield('funzioni')
 
     
 </div>
