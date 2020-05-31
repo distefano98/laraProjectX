@@ -6,6 +6,7 @@ use App\Models\Resources\Product;
 use App\Models\Catalogo;
 use App\Http\Requests\NewProductRequest;
 use App\Models\Resources\Category;
+use Illuminate\Http\Request;
 
 class StaffController extends Controller
 {
@@ -136,7 +137,20 @@ class StaffController extends Controller
     }
     
    
-    
+    public function newCategory(Request $request) {
+         $request->validate([
+        'nome' => ['required', 'max:25'],
+        ]);
+        
+        Category::create([
+            
+             'nome'=> $request->nome,
+             'parId' => 0,
+             'desc' => '',
+        ]);
+        
+        return redirect()->action('StaffController@showCategory');
+    }
     
     
     

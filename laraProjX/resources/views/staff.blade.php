@@ -4,7 +4,7 @@
 @section('head')
 <style>
     .cover{height: auto;}
-    .areaStaff{height: 500px;width: 70%;margin: auto}
+    .areaStaff{height: 800px;width: 70%;margin: auto}
     .areaStaff h2{text-align: center;font-family: Arial, Helvetica, sans-serif;color: #666666}
     .areaStaff p{text-align: center;}
     .opzione{width: 100%;height: 30%}
@@ -28,10 +28,13 @@
             <li> <a href="{{ route('showcategory')}}">  GESTIONE CATEGORIE </a> </li>
         </ul>
     </div>
-    @yield('funzioni')
-
     
+
+  @yield('funzioni')
 </div>
+
+
+
 @endsection
 
 

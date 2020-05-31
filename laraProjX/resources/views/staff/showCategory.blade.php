@@ -1,27 +1,41 @@
 @extends('staff')
 
-
-
-
+@section('head')
+@parent
+<style>
+    .newcategory_form{margin-top: 8%}
+    
+</style>
+@endsection
 
 @section('funzioni')
 
 
 <div style=" width:100%; clear:both; ">
-    <div style=" width:50%; float:left; border: 1px solid red;">
-    <h3> CATEGORIE</h3>
-<table style="margin: auto ; "border=" 1" class="table table-hover">
+    
+    
+ <div style="float:left; height: 200px">
+     <h3> CATEGORIE</h3>
+    <table  border="1" class="table table-hover">
   
  
- <tbody>
+     <tbody>
             @foreach ($macroCategories as $category)
           <td>{{$category->nome}} </td>
                 @endforeach
-       </tbody>
-       </table>
+     </tbody>
+    </table>
+      <div class="newcategory">
+  {{ Form::open(array('route' => 'newcategory', 'class' => 'newcategory_form')) }}
+  {{ Form::text('nome', null, ['placeholder' => 'inserisci nome categoria','class'=>'form-text']) }}
+  {{ Form::submit('Aggiungi categoria',['class'=>'pulsante']) }}
+  {{ Form::close() }}
 </div>
-  <div style=" width:50%;  float:right;  border: 1px solid greenyellow;">
+</div>
+    
+<div style="   float:right;  height: 200px">
       
+    
       
 <!-- tabella sottocategorie  -->
 <h3>SOTTOCATEGORIE</h3>

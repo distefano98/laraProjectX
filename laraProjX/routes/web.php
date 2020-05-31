@@ -114,6 +114,8 @@ Route::get('/deleteproduct/{prodId}','StaffController@deleteProduct')
 Route::get('/showcategory', 'StaffController@showCategory')
         ->name('showcategory');
 
+Route::post('/newcategory', 'StaffController@NewCategory')
+        ->name('newcategory');
 
 //admin
 Route::get('/admin', 'AdminController@index')
