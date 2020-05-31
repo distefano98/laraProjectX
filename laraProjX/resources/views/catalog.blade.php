@@ -7,7 +7,7 @@
 <style>
     .cover {height: auto;}
     .content_search{ overflow: hidden}
-    .serchbar{width: 304px;float: right;}
+    .searchbar{width: 318px;float: right}
     .form-text{padding: 6px;margin-top: 8px;font-size: 17px;border: none;}
     .pulsante{ float: right;padding: 6px 10px;margin-top: 8px;margin-right: 16px;background: #ddd;font-size: 17px;border: none;cursor: pointer;}
 </style> 
