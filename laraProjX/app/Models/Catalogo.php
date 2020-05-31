@@ -37,7 +37,7 @@ class Catalogo extends Model
     
     public function getProdsByTerm($term, $paged = 9) {
 
-        $prods = Product::where('descLong', 'like', "%$term[0]%");
+        $prods = Product::where('descLong', 'LIKE', "%$term[0]%");
         return $prods->paginate($paged);
     }
 }
