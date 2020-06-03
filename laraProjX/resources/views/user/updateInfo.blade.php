@@ -61,7 +61,7 @@ $(function () {
     </div>
     
     <div class="update_form_item"> 
-    {{Form::label('nascita','Data di nascita',['class'=>'label-form'])}}
+        {{ Form::label('nascita','Data di nascita',['class'=>'label-form']) }}
         {{ Form::date('nascita',now()) }}
     </div> 
         
