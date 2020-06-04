@@ -9,7 +9,7 @@
     .areaAdmin p{text-align: center;}
     .opzione{width: 100%;height: 30%}
     .opzione ul{list-style: none;padding: 0;width: 100%;text-align: center;}
-    .opzione ul li{display: inline-block;text-align: center ;width: 20%;  border: 0.5px solid #666666}
+    .opzione ul li{display: inline-block;text-align: center ;width: 20%;  background-color: #F1F1F1; border-radius: 20px; padding: 10px;}
     .opzione ul li a{text-decoration: none;color: black}
 </style>
 

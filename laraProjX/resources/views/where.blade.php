@@ -4,9 +4,9 @@
 
 <style>
     .cover_mappa{ position: absolute; border:solid 1px grey; width:50%; height:60%;margin: 5% 5% 5% 5%}
-    .info {float: right;width: 30%;height: 45%;margin-top:10%; margin-right: 5% }
+    .info {float: right;width: 30%;height: 45%;margin-top:45px; margin-right: 5% }
     .info_item {clear: both;width: 98%;height: 38%;margin: 5%;margin-right: 0;}
-    .info_item img{width: 12%;height: 30%;}
+    .info_item img{width: 12%; border-radius:50%}
     .info_item p {float: right}
     .info_item a {text-decoration: none;color: black; font-style: italic}
     </style>
@@ -21,7 +21,7 @@
 <div class="info">
     <div class="info_item"> <img  src="{{ asset('css/image/posizione.png') }}"><p> Saint, Canaries, Saint Lucia </a></p></div>
     <div class="info_item"> <img src="{{ asset('css/image/email.png') }}"> <p> <a href="mailto:wlcctechnology@gmail.com">wlcctechnology@gmail.com</a></p></div>
-    <div class="info_item"> <img  src="{{ asset('css/image/telefono.jpg') }}"><p> +1 758-714-9568 </p></div>
+    <div class="info_item"> <img  src="{{ asset('css/image/telefono.png') }}"><p> +1 758-714-9568 </p></div>
    
 </div>
 

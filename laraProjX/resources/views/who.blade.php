@@ -5,8 +5,8 @@
   
   .corpo{margin: auto;width: 60%;height: 60%;}  
   .corpo h1{text-align: center;font-style: italic;color: #666666;margin: 0;} 
-  
-  .corpo p{margin: 5%}
+  .corpo h4{text-align: center;}
+  .corpo p{text-align: center; margin: 5%}
 </style>
 @endsection
 @section ('content')

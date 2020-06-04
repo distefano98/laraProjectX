@@ -13,8 +13,8 @@
     .info_utente b{font-style: italic}
     .opzione{ width: 50%;float: right;height: 45%;width: 40%}
     .opzione ul{display: block;list-style: none;width: 100%;height: 100%;}
-    .opzione ul li{text-align: center;width: 45%;height: 30%;border: 1px solid grey ;margin: 10%;padding: 2%}
-    .opzione ul li a{text-decoration: none;color: black}
+    .opzione ul li{text-align: center;width: 45%;height: 30%; background-color: #F1F1F1; border-radius: 20px; margin:10px;}
+    .opzione ul li a{text-decoration: none;color: black; vertical-align:middle}
 </style>
 @endsection
 @section('content')

@@ -8,8 +8,8 @@
     .cover {height: auto;}
     .content_search{ overflow: hidden}
     .searchbar{width: 318px;float: right}
-    .form-text{padding: 6px;margin-top: 8px;font-size: 17px;border: none;}
-    .pulsante{ float: right;padding: 6px 10px;margin-top: 8px;margin-right: 16px;background: #ddd;font-size: 17px;border: none;cursor: pointer;}
+    .form-text{padding: 6px;margin-top: 8px;font-size: 17px;border: none; background-color: #F1F1F1; border-radius: 5px;}
+    .pulsante{ float: right;padding: 6px 10px;margin-top: 8px;margin-right: 16px;background: #F1F1F1;font-size: 17px;border: none;cursor: pointer; border-radius: 5px;}
 </style> 
 
 @endsection
