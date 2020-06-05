@@ -10,6 +10,7 @@
     .searchbar{width: 318px;float: right}
     .form-text{padding: 6px;margin-top: 8px;font-size: 17px;border: none; background-color: #F1F1F1; border-radius: 5px;}
     .pulsante{ float: right;padding: 6px 10px;margin-top: 8px;margin-right: 16px;background: #F1F1F1;font-size: 17px;border: none;cursor: pointer; border-radius: 5px;}
+    .bottoni{float: right;font-size: xx-large;}
 </style> 
 
 @endsection
@@ -19,7 +20,7 @@
 
 
 @can('isStaff')
-<div> <h2 style="text-align: center;font-style: italic;color: gray;text-decoration: underline">Per Modificare o cancellare un prodotto vai alla sua scheda prodotto </h2> </div>
+<div> <h2 style="text-align: center;font-style: italic;color: red;text-decoration: underline">Per Modificare o cancellare un prodotto utilizza i pulsanti di modifica e cancella sui singoli prodotti </h2> </div>
 @endcan    
      <div class="categorie">
         <ul class="categorie_item">
@@ -72,9 +73,11 @@
             <h2> <a>Descrizione Breve</a></h2>
                         <p class="meta"> {{ $product->descShort }}</p>
         </div>
-            
-       
-        
+   @can('isStaff')         
+       <div class="bottoni">
+         @include('helpers/productEdit')
+     </div>
+   @endcan      
          
                 
 </div>    

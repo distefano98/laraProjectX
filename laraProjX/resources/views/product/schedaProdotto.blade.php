@@ -8,6 +8,7 @@
 <style>
     
      .cover {height: auto}
+     .bottoni{text-align: center; font-size: xx-large}
      
 </style> 
 @endsection
