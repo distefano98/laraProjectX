@@ -32,12 +32,48 @@
            </div>
             
             
-            <div class="cover_card">
-                <section class="card" id="card1"><p> <b> CENTINAIA DI PRODOTTI </b></p></section>
-                <section class="card" id="card2"><p><b>ACCEDI O REGISTRATI PER I NOSTRI SCONTI</b></p> </section>
-                <section class="card" id="card3"><p><b> SCEGLI IL METODO DI PAGAMENTO CHE PREFERISCI</b></p></section>
-    
+            <section class="home">
+     <div class="slider">
+         <div class="slide active" style="background-image: url('https://www.pillowservice.it/wp-content/uploads/2019/06/musica-in-ufficio-1.jpg');" >
+            <div class="container">
+                <div class="caption">
+                    <h1>Centinaia di prodotti</h1>
+                    <p>Smartphone/Pc/Tablet</p>
+                    <a href="catalog">Catalogo</a>
+                </div>
             </div>
+        </div>
+     </div>
+                </section>
+                <section class="home">
+     <div class="slider">
+        <div class="slide active" style="background-image: url('https://www.volantinofacile.it/vf/img/sezioni/offertesconti.png'); background-color: #ffffff;">
+            <div class="container">
+                <div class="caption">
+                    <h1>Accedi o registrati</h1>
+                    <p>Per te sconti imperdibili! </p>
+                    <a href="login">Login</a>
+                </div>
+            </div>
+        </div>
+     </div>
+                    </section>
+                    <section class="home">
+     <div class="slider">
+        <div class="slide active" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/70/Canaries_in_Saint_Lucia_2014.svg')">
+            <div class="container">
+                <div class="caption">
+                    <h1>Vieni a trovarci</h1>
+                    <p>Santa Lucia</p>
+                    <a href="where">Dove siamo</a>
+                </div>
+            </div>
+        </div>
+     </div>
+   
+  
+  </section>
+
             
             <section  class="descrizione_sito">
                            
