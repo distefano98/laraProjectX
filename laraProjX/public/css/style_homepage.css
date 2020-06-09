@@ -3,8 +3,8 @@
 .cover_slider{position: relative;width: 60%;height: 100%;margin: auto;overflow: hidden;}
 
 .cover_slider_item{position:absolute;width: 100%;height: 100%;}
-.cover_slider p{width: 80%;height: auto;display: block;color: black; background-color:#d6d6d6;
-               opacity: 0.9;text-align: center; position: relative;margin: auto;}
+.cover_slider p{height: auto;display: block;color: black; background-color:#d6d6d6;font-size:20px;
+               opacity: 0.9;text-align: center; position: relative;margin: auto; padding : 10px; font-family: sans-serif;}
 
 .cover_card{height:40%;width: 100%;display: block;}
 .card{position: relative;height: 100%;width: 31%;float: left;margin:1%;background-size: 100% 100%;}
