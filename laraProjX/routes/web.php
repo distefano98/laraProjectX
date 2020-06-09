@@ -145,5 +145,8 @@ Route::get('/deletestaff/{id}','AdminController@deleteStaff')
 Route::get('/deleteuser/{id}','AdminController@deleteUser')
         ->name('deleteuser');
 
+Route::post('/deleteusers','AdminController@deleteMultiple')
+        ->name('multiple-delete');
+
 //----------------------------------------------------------------------------
 

@@ -137,4 +137,11 @@ class AdminController extends Controller
     }
     
     
+     public function deleteMultiple(Request $request){
+        $ids = $request->input('ids');
+        User::whereIn('id',explode(",",$ids))->delete();
+        return response()->json(['status'=>true, 'redirect' => route('showuser'), 'message'=>"User eliminati."]);
+        
+    }
+    
 }
