@@ -50,9 +50,17 @@
         <div class="slide active" style="background-image: url('https://www.volantinofacile.it/vf/img/sezioni/offertesconti.png'); background-color: #ffffff;">
             <div class="container">
                 <div class="caption">
+                   @guest
                     <h1>Accedi o registrati</h1>
                     <p>Per te sconti imperdibili! </p>
                     <a href="login">Login</a>
+                    @endguest
+                    
+                    @can('isUser')
+                    <h1>Area Utente</h1>
+                     <p>Gestisci i tuoi dati </p>
+                    <a href="user">Vai all'area utente</a>
+                    @endcan
                 </div>
             </div>
         </div>
