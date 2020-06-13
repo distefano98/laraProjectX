@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/style_catalogo.css') }}" >
 <style>
     .cover {height: auto;}
-    .content_search{ overflow: hidden}
+    .content_search{ }
     .searchbar{width: 318px;float: right}
     .form-text{padding: 6px;margin-top: 8px;font-size: 17px;border: none; background-color: #F1F1F1; border-radius: 5px;}
     .pulsante{ float: right;padding: 6px 10px;margin-top: 8px;margin-right: 16px;background: #F1F1F1;font-size: 17px;border: none;cursor: pointer; border-radius: 5px;}
@@ -44,19 +44,28 @@
                </li>
               @endforeach
          </ul>
-                
-            </div>
-@endisset()
-    
+          </div>
 
- @isset($products)
+ @endisset()       
  
+@if(Auth::guest() || Auth::user()->role=='user')
  <div class="content_search">
-  {{ Form::open(array('route' => 'search', 'class' => 'searchbar')) }}
+  
+ @isset($selectedMacroCateg)
+  @isset($selectedSubCat)
+
+  {{ Form::open(array('action' => ['PublicController@search',$selectedMacroCateg->$catId,$selectedSubCat->catId], 'class' => 'searchbar')) }}
   {{ Form::text('term', null, ['placeholder' => 'ES. fotocamera 12 MP','class'=>'form-text']) }}
   {{ Form::submit('CERCA',['class'=>'pulsante']) }}
   {{ Form::close() }}
-</div>
+  
+ @endisset()
+   @endisset()
+ </div>
+@endif
+
+ @isset($products)
+ 
  
     @foreach ($products as $product)
     <div class="prod">

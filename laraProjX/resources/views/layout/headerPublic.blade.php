@@ -2,6 +2,7 @@
     
     <ul class="header__menu">
         @guest
+                <li class="header__menu__item"> <a download="RELAZIONE.pdf">RELAZIONE</a> 
                 <li class="header__menu__item"> <a href="{{ route('Homepage') }}"> HOME </a></li>
                 <li class="header__menu__item"> <a href="{{ route('catalog') }}"> CATALOGO </a></li>
                 <li class="header__menu__item"> <a href="{{ route('who') }}"> CHI SIAMO </a></li>

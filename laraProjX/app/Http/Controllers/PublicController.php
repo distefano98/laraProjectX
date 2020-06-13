@@ -75,23 +75,37 @@ class PublicController extends Controller
     }
     
     
-    public function search(Request $request) {
+    public function search(Request $request,$macroCatId,$catId) {
        //Categorie
         $macroCategs = $this->__catalogoModel->getMacroCategs();
-
+        
+        //categoria selezionata
+        $selMacroCateg = $macroCategs->where('catId', $macroCatId)->first();
+        
         //Sottocategorie
-        $subCategs = $this->__catalogoModel->getCategsByParId([$macroCategs]);
+         $subCategs = $this->__catalogoModel->getCategsByParId([$macroCatId]);
 	
-        //Prodotti
-	$validated = $request->validate([
+        //Sottocategoria selezionata
+        $selSubCat=$subCategs->where('catId',$catId)->first();
+        
+        Log::info($request);
+	$term = $request->validate([
         'term' => ['required', 'max:30'],
         ]);
-        $prods = $this->__catalogoModel->getProdsByTerm([$validated['term']]);
-	
+        Log::info($term);
+       
+        
+        $prods = $this->__catalogoModel->getProdsByTerm([$term, $catId ,3]);
+	Log::info($prods);
 
         return view('catalog')
                         ->with('macroCategories', $macroCategs)
-                        ->with('subCategories', $subCategs)
+                        ->with('selectedMacroCateg', $selMacroCateg)
+                        ->with('subCategories',  $subCategs)
+                        ->with('selectedSubCat', $selSubCate) 
                         ->with('products', $prods);
     }
+    
+    
+    
 }
