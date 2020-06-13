@@ -4,10 +4,10 @@
 @section('head')
 <style>
     .cover{height: auto;}
-    .areaAdmin{height: 500px;width: 100%;margin: auto}
+    .areaAdmin{min-height: 19em;width: 100%;padding-bottom:13em}
     .areaAdmin h2{text-align: center;font-family: Arial, Helvetica, sans-serif;color: #666666}
     .areaAdmin p{text-align: center;}
-    .opzione{width: 100%;height: 30%}
+    .opzione{width: 100%;height: 5em}
     .opzione ul{list-style: none;padding: 0;width: 100%;text-align: center;}
     .opzione ul li{display: inline-block;text-align: center ;width: 20%;  background-color: #F1F1F1; border-radius: 20px; padding: 10px;}
     .opzione ul li a{text-decoration: none;color: black}
