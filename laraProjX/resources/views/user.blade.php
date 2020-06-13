@@ -13,7 +13,7 @@
     .info_utente b{font-style: italic}
     .opzione{ width: 50%;float: right;height: 45%;width: 40%}
     .opzione ul{display: block;list-style: none;width: 100%;height: 100%;}
-    .opzione ul li{text-align: center;width: 45%;height: 30%; background-color: #F1F1F1; border-radius: 20px; margin:10px;}
+    .opzione ul li{text-align: center; background-color: #F1F1F1; border-radius: 20px; margin:10px; padding: 10px;}
     .opzione ul li a{text-decoration: none;color: black; vertical-align:middle}
 </style>
 @endsection
@@ -37,7 +37,7 @@
    
    <div class="opzione">
         <ul>
-            <li><a href="{{route('changeinfo')}}"> MODIFICA INFORMAZIONI UTENTE </a></li>
+            <li><a href="{{route('changeinfo')}}"> MODIFICA INFO UTENTE </a></li>
             <li><a href="{{route('changepassword')}}" > MODIFICA PASSWORD </a> </li>
         </ul>
     </div>
