@@ -68,7 +68,7 @@ Route::get('/product/{prodId}','PublicController@showProduct')
         ->name('showproduct');
 
 
-Route::post('/search','PublicController@search')
+Route::post('search/selMacroCateg/{macroCatId}/selCat/{catId}', 'PublicController@search')
         ->name('search');
 // ------------------------------------------------------------------------------
 
