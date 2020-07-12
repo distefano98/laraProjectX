@@ -8,8 +8,8 @@
     
 </style>
 <meta name="csrf-token" content="{{ csrf_token() }}">
-@section('scripts')
 
+@section('scripts')
 
 <script src="{{ asset('js/functions.js') }}" ></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -132,7 +132,6 @@ $(document).ready(function () {
             <div class="pulsante">
             {{ Form::button('Cancella', ['class' => 'btn btn-danger ', 'data-toggle'=>'confirmation', 'data-placement'=>'left']) }}
             </div>
-            </a>
             {{ Form::close() }}
     </div>
 @endsection
